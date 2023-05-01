@@ -9,4 +9,50 @@ En caso de tratarse de un trabajo donde los datos son muy importantes, puede hab
 Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. 
 No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.
 
+Añadir los posibles sensores, el cable USB, microcontrolador (En mi caso arduino (hardware y software en C++ simplificado)). Las aplicaciones que se han usado para la realización del proyecto... Se deberá explicar porque se han usado unos sensores u otros (si se hace una tabla comparativa mejor). 
 
+
+\subsection{Aplicaciones empleadas.}
+
+\begin{itemize}
+\item \textbf{Overleaf}: es un editor LaTeX colaborativo en línea, que se emplea para la creación, edición y publicación de documentos científicos. LaTeX es una herramienta que a partir del procesamiento de un documento de texto plano compuesto por texto y comandos LaTeX por el software de TeX engine convierte los comandos LaTeX y el texto del documento en un archivo PDF profesional. Esta es la herramienta que se ha empleado para la realización de este documento. Se puede acceder a través de https://www.overleaf.com  %(Referencia: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX )
+
+\item \textbf{Diagrams.net}: es una aplicación de código abierto para la realización de diagramas online, con gran cantidad de librerías de formas para su realización. Esta aplicación es la que se ha empleado para la realización de la gran mayoría de diagramas del proyecto y los prototipos de interfaz. Se puede acceder a través de: https://www.diagrams.net % Referencia: https://www.diagrams.net/doc/getting-started-editor  
+
+\item \textbf{Tinkercad}:es una aplicación web gratuita que permite desarrollar habilidades de diseño 3D, electrónica y programación, sin necesidad de utilizar ningún tipo de software adicional. En este proyecto se ha empleado esta herramienta para la simulación del diseño del circuito electrónico, ya que permite realizar circuitos y componentes desde 0 o empleando sus circuitos predefinidos. Además, esta aplicación consta de un editor de código que permite programar las simulaciones. Se puede acceder a través de: https://www.tinkercad.com %Referencia: https://www.tinkercad.com/circuits 
+
+\end{itemize}
+
+\subsection{Herramientas.}
+AÑADIR IMÁGENES
+\begin{itemize}
+\item \textbf{Arduino}:  plataforma de código abierto de electrónica basada en hardware y software simple y accesible, originalmente creada para la creación rápida de prototipos. Existen diferentes placas de Arduino con distintas funciones. Se puede introducir en el microcontrolador un conjunto de instrucciones que se quiere que realice el dispositivo mediante el uso del software de Arduino (IDE), estas instrucciones están escritas en el lenguaje de programación Arduino, que es similar a C++ pero simplificado, además se puede expandir el lenguaje utilizando distintas bibliotecas C++. Esta plataforma es muy utilizada y ha permitido crear gran variedad de proyectos. Su sencillez, accesibilidad y coste son las principales razones por las que se ha pensado en realizar el prototipo de este proyecto basado en esta plataforma. Se utilizará como microcontrolador la placa de Arduino UNO.
+% Referencia: https://www.arduino.cc/en/Guide/Introduction
+
+\item \textbf{ProtoBoard}: placa sobre la que se construyen los circuitos electrónicos, se trata de una matriz de clavijas donde se insertan los componentes electrónicos.
+
+\item \textbf{Cableado}: permiten la conexión del circuito.
+
+\item \textbf{Resistencias}: componentes electrónicos que limitan el flujo de energía eléctrica del circuito.
+
+\item \textbf{Leds}: diodo que se ilumina cuando pasa una corriente eléctrica por él.
+
+\item \textbf{Pulsador}: para poder encender o apagar el dispositivo.
+
+\item \textbf{Cable USB}: permite introducir las instrucciones programadas en un ordenador a la placa de Arduino.
+
+\end{itemize}
+
+
+\subsubsection{Posibles sensores.}
+
+AÑADIR IMÁGENES Y CREAR TABLA DE COMPARACIÓN
+\begin{itemize}
+    \item \textbf{Módulo SCA60C}: es un módulo que consta de un sensor de ángulo SCA60C y un acelerómetro N100060. Gracias a este sensor se pueden medir ángulos de 0 a 180º, con resolución de un grado, con un voltaje de entrada de 5 voltios y una tensión de salida en función del ángulo de 0,45 - 4,5 voltios. La corriente que necesita módulo ronda los 2 mA. Este módulo admite distintos rangos de medición y se utiliza para multitud de aplicaciones en las que se necesite conocer constantemente el ángulo de giro. 
+    
+    \item \textbf{Galgas extensiométricas y módulo HX711}: se trata de un conjunto cuyo objetivo es medir el peso, basado en un transductor de galgas extensiométricas y un módulo HX711 que actúa como amplificador de la señal y transfiere los datos al microcontrolador. La galga extensiométrica o celda de carga es un transductor que convierte la tensión generada por los cambios en la longitud de un objeto a una señal eléctrica, en función del peso que se quiere medir existen distintas celdas de carga. Mientras que el módulo HX711 consta de un amplificador y un convertidor analógico-digital HX711, que permite la amplificación de la señal producida por la galga extensiométrica. Este módulo utiliza un puente de Weahstone para convertir la fuerza aplicada en una señal analógica. Necesita una tensión de entrada de 5 voltios y el resultado se puede obtener en g, kg o Newtons. La utilización de este módulo requiere de la librería de Arduino hx711. El precio ronda los 10-15€.
+    
+    \item \textbf{Acelerómetro ADXL345}: es un acelerómetro micromecanizado (MEMS) capacitivo de 3 grados de Libertad (3DOF) acoplado a un bloque de memoria FIFO que almacena hasta 32 conjuntos de coordenadas. Además, es compatible con un procesador como Arduino mediante conexio por bus SPI o bus I2C. Este dispositivo permite conocer la orientación del sensor por la acción de la fuerza de gravedad basándose en la detección de la aceleración en los ejes X, Y y Z. Se trata de un dispositivo de ultra bajo consumo utilizando en funcionamiento con unos 45 $\mu$A de corriente mientras que en Stand-By solamente usa unos 0,1 $\mu$A. Necesita una tensión de alimentación de unos 2 a 3,6 voltios. El rango de medición del dispositivo es ajustable, con resolución de hasta 13 bits y sensibilidad de 40 mg/LBS.
+    
+    \item \textbf{IMU MPU-6050}: es un módulo de unidad de medición inercial de 6 grados de libertad (6 DOF) fabricado por Invensense, que permite conocer la posición del sensor en todo momento. Este módulo consta de un acelerómetro de 3 ejes, un giroscopio de 3 ejes, conversores analógico a digital (ADC) de 16 bits, un sensor de temperatura, un reloj de alta precisión e interrupciones programables y un procesador interno (DMP Digital Motion Porcessor). Tanto el rango del acelerómetro como del giroscopio son ajustables. Este módulo se acopla mediante un bus SPI o un bus I2C, necesita una tensión de alimentación de unos 2,4 - 3,6 voltios y consume unos 3,5 mA al tener todos sus componentes activados. Es uno de los sensores más empleados y tiene un coste de unos 6-15€.
+\end{itemize}
