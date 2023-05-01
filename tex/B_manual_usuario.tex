@@ -1,10 +1,158 @@
 \apendice{Documentación de usuario}
 
 \section{Requisitos software y hardware para ejecutar el proyecto.}
+%Añadir requisitos y tablas de requisitos, pensar si se quieren dividir en requisitos funcionales y no funcionales.
+\subsection{Requisitos funcionales}
 
-\section{Instalación / Puesta en marcha}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-01 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-01} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Aplicación}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La solución deberá contar con una aplicación, ya sea una aplicación de escritorio, web o móvil, para simplificar la experiencia de uso y la visualización de resultados por parte del usuario.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Alta, es la base de la visualización del seguimiento de la persona que utiliza el dispositivo.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Alta}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 1 'Aplicación'}
+\label{RF_01}
+\end{table}
 
-\section{Manuales y/o Demostraciones prácticas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-02 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-02} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Iniciar grabación}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La solución deberá contar con una opción de grabación, con la cual el profesional o el usuario tendrán la posibilidad de comenzar y finalizar el registro de la postura.\\ Los resultados durante la grabación se almacenarán en la plataforma para su análisis.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Alta, ya que la grabación de las respuestas permitirá al profesional analizarlas de forma detallada con el objetivo de obtener conclusiones y determinar el grado y evolución de la afectación.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Alta}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 2 'Iniciar grabación'}
+\label{RF_02}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-03 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-03} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Identificación de perfiles}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La aplicación debe ser capaz de diferenciar a diferentes perfiles, en el caso de uso de una organización o un profesional, y una única identificación en el caso de que se trate de un usuario particular.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Media, una vez se obtenga la base del dispositivo y su funcionamiento se puede dividir a los usuarios entre profesionales o particulares, con distintas funciones para cada uno de ellos.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Media}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 3 'Identificación de perfiles'}
+\label{RF_03}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-04 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-04} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Detección de la postura}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La solución deberá ser capaz de detectar los cambios en la postura. Para ello se deberá implementar un algoritmo que filtre en función de los datos en crudo recogidos, una postura correcta o incorrecta. Esta medición se podría obtener en forma de ‘porcentaje de buena postura’.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Alta, dado que es la base que permitirá definir si la persona lleva una buena postura o no, y en base a ello, realizar la comunicación correspondiente y obtener las estadísticas necesarias para la toma de decisiones.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Alta}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 4 'Detección postural'}
+\label{RF_04}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-05 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-05} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Comunicar una postura incorrecta}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La solución debe poder comunicar mediante, vibración, sonido u otra manera una mala postura continuada durante un periodo de tiempo definido.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Alta, es necesario que el usuario conozca en todo momento su situación, para poder corregir su postura cuando sea necesario.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Media}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 5 'Comunicar una postura incorrecta'}
+\label{RF_05}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-06 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-06} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Realizar seguimiento}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La información registrada por el dispositivo debe quedar almacenada para valorar y evaluar la postura del paciente, con el fin de modificar o no el tratamiento o fisioterapia o tomar otro tipo de decisiones.\\ La visualización de la información recogida se reflejará en forma de gráficos y tablas. Esto permitirá analizar la información de manera clara y sencilla
+\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Alta, ya que será clave para la toma de decisiones por parte del especialista en cuanto a la personalización del tratamiento y rehabilitación.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Alta}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 6 'Realizar seguimiento'}
+\label{RF_06}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-07 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[h!]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-07} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Manual de usuario}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La solución deberá incluir unas instrucciones que se entreguen al usuario que lo vaya a utilizar. Esto supone un apoyo durante todo el proceso de uso del dispositivo y de la aplicación por parte del usuario.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Media, puesto que supone un apoyo para el usuario que lo utilice.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Baja}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 7 'Manual de usuario'}
+\label{RF_07}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-08 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[]
+\begin{tabular}{|
+>{\columncolor[HTML]{EFEFEF}}c |l|}
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{RF-08} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Batería}}                                                                                                                                                                                \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}El dispositivo debe disponer de una batería para poder utilizarlo de forma telemática. Además, la batería del dispositivo debe ser suficiente para el uso previsto.\end{tabular} \\ \hline
+Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Media, se debe incluir para mayor comodidad y libertad del paciente al utilizar el dispositivo.\end{tabular}                                                                               \\ \hline
+Prioridad                              & \multicolumn{1}{c|}{Media}                                                                                                                                                                                                                       \\ \hline
+\end{tabular}
+\caption{Requisito Funcional 8 'Batería'}
+\label{RF_08}
+\end{table}
+
+\clearpage
+\subsection{Requisitos no funcionales}
+\begin{itemize}
+    \item \textbf{Accesibilidad}: la aplicación debe ser accesible para el mayor grupo de personas posible, tengan o no algún tipo de discapacidad.
+    \item \textbf{Seguridad}: el dispositivo electrónico debe ser seguro y la información manejada en la aplicación debe estar protegida.
+    \item \textbf{Compatibilidad}: la aplicación debe ser compatible con distintos dispositivos.
+    \item \textbf{Eficiencia}: la aplicación debe permitir al usuario lograr sus objetivos, con un coste computacional y temporal bajo.
+    \item \textbf{Efectividad}: la aplicación debe cumplir con exactitud los requisitos funcionales. 
+    \item \textbf{Errores}: la aplicación debe presentar una tasa de error baja, además debe mostrar posibles soluciones en caso de anomalías.
+    \item \textbf{Aprendizaje}: tanto el uso del dispositivo electrónico como de la aplicación debe ser sencillo, es decir, se debe poder usar de forma intuitiva.
+    \item \textbf{Memorabilidad}: tanto el funcionamiento del dispositivo electrónico como de la aplicación debe ser fácil de recordar, tras no haberlos utilizado durante un tiempo.
+    \item \textbf{Satisfacción}: el usuario debe estar satisfecho con el dispositivo electrónico y la aplicación, tanto por su comodidad, estética y usabilidad.
+
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+% Otra opción para salto de página \newpage
+\section{Instalación / Puesta en marcha}[h!]
+
+Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+xX
+
+X
+
+X
+
+X
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Manuales y/o Demostraciones prácticas}[h!]
+
+Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 
 
 
