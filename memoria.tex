@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt,twoside]{memoir}
 
+
 % Castellano
 \usepackage[spanish,es-tabla]{babel}
 \selectlanguage{spanish}
@@ -8,6 +9,11 @@
 \usepackage{lmodern} % Scalable font
 \usepackage{microtype}
 \usepackage{placeins}
+\usepackage{listings}
+
+\usepackage[style=numeric,sorting=none]{biblatex} % Para la bibliografia
+\addbibresource{bibliografia.bib} % Para la bibliografia
+\usepackage{geometry} 
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
@@ -17,7 +23,7 @@
 % Links
 \PassOptionsToPackage{hyphens}{url}\usepackage[colorlinks]{hyperref}
 \hypersetup{
-	allcolors = {red}
+	allcolors = {black} % Quitar o volver a poner a 'red' o 'black'
 }
 
 % Ecuaciones
@@ -134,8 +140,8 @@
     \noindent\Large
     \@date{}\\
     \vspace{0.5cm}
-    %Tutor: \@tutor{}\\ % comenta el que no corresponda
-    Tutores: \@tutor{} -- \@tutorb{}\\
+    Tutor: \@tutor{}\\ % comenta el que no corresponda
+    %Tutores: \@tutor{} -- \@tutorb{}\\
   }%
   \end{center}%
   \null
@@ -191,12 +197,12 @@ D. \nombreTutor
 \end{flushleft}
 \end{minipage}
 \hfill
-\begin{minipage}{0.45\textwidth}
-\begin{flushleft} %\large
-Vº. Bº. del Tutor:\\[2cm]
-D. \nombreTutorb
-\end{flushleft}
-\end{minipage}
+%\begin{minipage}{0.45\textwidth}
+%\begin{flushleft} %\large
+%Vº. Bº. del Tutor:\\[2cm]
+%D. \nombreTutorb
+%\end{flushleft}
+%\end{minipage}
 \hfill
 
 \vfill
@@ -222,7 +228,7 @@ En este primer apartado se hace una \textbf{breve} presentación del tema que se
 
 \renewcommand*\abstractname{Descriptores}
 \begin{abstract}
-Palabras separadas por comas que identifiquen el contenido del proyecto Ej: Dispositivo, control postural, servidor web, buscador de vuelos, android \ldots
+Palabras separadas por comas que identifiquen el contenido del proyecto Ej: Dispositivo, control postural, servidor web, buscador de vuelos, android, agsda, asds, asddasf, asdfdfs, asdsdafas, asdfsdaf,asdf sadf. \ldots
 \end{abstract}
 
 \clearpage
@@ -260,8 +266,14 @@ keywords separated by commas. Dispositivo, Control postural. (En inglés)
 \include{./tex/4_conclusiones}
 \include{./tex/5_lineas_futuras}
 
+% -----------------BIBLIOGRAFÍA-------------------
+%\bibliographystyle{plain} % Sin URL con números
+%\bibliography{bibliografia}
 
-\bibliographystyle{plain}
-\bibliography{bibliografia}
+% Si se salen de los márgenes las referencias:
+%\newgeometry{left= 3cm, right = 3cm}
+\printbibliography[]
+
+
 
 \end{document}

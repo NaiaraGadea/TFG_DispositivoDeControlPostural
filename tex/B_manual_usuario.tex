@@ -141,18 +141,152 @@ Prioridad                              & \multicolumn{1}{c|}{Media}             
 Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 xX
 
+Explicación de las versiones de arduino y como se usan??
 X
+\subsection{Versión 1, empleando el sensor SW520D}
+Como primera versión se ha creado un prototipo empleando arduino y el sensor SW520D.
 
-X
+Se ha incluido un botón de encendido, un led de color azul que indica que el dispositivo se encuentra encendido, un zumbador pasivo que actuará como señal sonora, un motor de vibración que actuará como aviso vibratorio y el sensor de inclinación SW520D.
 
+Cuando el sensor detecta que la persona se ha inclinado, por lo tanto detecta una mala postura y salta una alerta de sonora (melodía modificable empleando el zumbador) y vibratoria (motor de vibración).
+
+Se pueden observar los componenetes y las conexiones realizadas en las siguientes imágenes:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/PrototipoV1_Tilt.png}
+    \caption{Diagrama de la primera versión del prototipo, empleando el sensor SW520D}
+    \label{fig:ProtV1} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/Prot_V1_Esquema.pdf}
+    \caption{Diagrama de las realizadas para la implementación de la primera versión del protoripo.}
+    \label{fig:ProtV1_esquema} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+
+
+\newpage
+El código empleado para el funcionamiento de esta primera versión ha sido el siguiente:
+\begin{lstlisting}
+// Led simple + Boton + Zumbador + Tilt + Motor Vibracion
+// Naiara Gadea Rodriguez Gomez
+// 
+
+int led = 4; // Seleccion del pin del led (pin digital)
+int  boton = 2; // Seleccion del pin del boton (pin digital)
+int zum = 7;// Seleccion del pin del zumbador
+int tilt = 12;// Seleccion del pin del sensor SW250D
+int motor = 3; //Seleccion del pin del motor de vibracion
+
+int estado; // Estado del boton
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(led, OUTPUT); // inicializacion del pin led.
+  pinMode(boton, INPUT); // inicializacion del pin del boton.
+  pinMode(zum, OUTPUT); // inicializacion del pin del zumbador
+  pinMode(tilt, INPUT); // inicializacion del pin del sensor tilt
+  digitalWrite(tilt , HIGH); // Sensor tilt 
+  pinMode(motor, OUTPUT);// inicializacion del pin del motor de vibracion.
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  Serial.println(digitalRead(tilt));// Comprobar en el Serial Monitor.
+  if (estado == LOW && digitalRead(boton)){
+    // Si se presiona el boton se enciende el dispositivo
+    digitalWrite(led, HIGH); // Encendido
+      delay(1000); // Durante 1 segundo (1000 ms)
+      estado = HIGH; // Cambia el estado del boton a encendido.
+    
+  }
+  if(estado == HIGH){
+    // Si el sensor tilt hace contacto, el usuario tiene una mala postura y el dispositivo manda un aviso, musical o de vibración.
+    if (digitalRead(tilt))  {
+      // Vibración intermitente
+      digitalWrite(motor, HIGH); //vibración
+      delay(500);  // delay 0.5 seconds
+      //digitalWrite(motor, LOW);  //stop vibrating
+      //delay(500); //wait 0.5 seconds.
+      // si vemos que durante la música no se enciende el motor
+      
+      melodia(); // En este caso es un aviso sonoro, pero teniendo un motor de vibracion se puede utilizar un aviso vibratorio.
+      
+    }  else  {
+      // Si no hay contacto con el sensor tilt, no suena la melodía
+      noTone(zum); // El zumbador ya no emite ruido
+      //delay(3000);
+      digitalWrite(motor, LOW);// Paramos el motor
+    }
+
+    // Si se presiona el boton se apaga el dispositivo
+    if (digitalRead(boton)){
+      digitalWrite(led, LOW); // Apagado
+      delay(1000); // Durante 1 segundo (1000ms)
+      estado = LOW; // Cambia el estado del boton a apagado.
+    }
+    
+  }
+
+}
+
+// Definimos las notas
+int Do = 261;
+int Re = 293;
+int Mi = 329;
+int Fa = 349;
+int Sol = 392;
+int La = 440;
+int Si = 493;
+
+void melodia(){
+  // Escala de musica con el zumbador
+    tone(zum, Fa, 500);
+    delay(700);
+    tone(zum, Sol, 500);
+    delay(700);
+    tone(zum, Sol, 500);
+    delay(700);
+    tone(zum, La, 1000);
+    delay(1700);
+    tone(zum, Sol, 500);
+    delay(700);
+    tone(zum, Fa, 500);
+    delay(700);
+    tone(zum, Sol, 500);
+    delay(700);
+    //tone(zum, Do, 1000);
+    //delay(1700);
+    //tone(zum, Fa, 500);
+    //delay(700);
+    //tone(zum, La, 500);
+    //delay(700);
+    //tone(zum, Fa, 500);
+    //delay(700);
+    //tone(zum, Re, 1000);
+    //delay(1700);
+    
+}
+
+\end{lstlisting}
+
+Esta versión proporciona un resultado medianamente satisfactorio, porque realiza su función correctamente, pero, puede dar lugar a errores si la persona realiza una inclinación rápida o si el sensor SW520D no está correctamente orientdao. Además esta priemra versión será muy sensible a vibraciones debido a las propias características del sensor empleado.
+
+\subsection{Versión 2, empleando el sensor MPU-6050}
 X
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Manuales y/o Demostraciones prácticas}[h!]
 
 Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+
+Incluir imágenes de cada paso al utilizar cada una de las versiones.
 
 
 

@@ -8,6 +8,33 @@
 \usepackage{lmodern} % scalable font
 \usepackage{microtype}
 \usepackage{placeins}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{textgreek}
+
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color[rgb]{0.95,0.95,0.92},
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+\usepackage[style=numeric,sorting=none]{biblatex} % Para la bibliografia
+\addbibresource{bibliografiaAnexos.bib} % Para la bibliografia
+\usepackage{geometry} 
 
 \RequirePackage{booktabs}
 \RequirePackage[table]{xcolor}
@@ -17,7 +44,7 @@
 % Links
 \PassOptionsToPackage{hyphens}{url}\usepackage[colorlinks]{hyperref}
 \hypersetup{
-	allcolors = {red}
+	allcolors = {black} % Originalmente estaba en 'red'
 }
 
 % Ecuaciones
@@ -196,7 +223,15 @@
 \include{./tex/G_experimental}
 
 
-\bibliographystyle{plain}
-\bibliography{bibliografiaAnexos}
+% -----------------BIBLIOGRAFÍA-------------------
+%\bibliographystyle{plain} % Sin URL con números
+%\bibliography{bibliografiaAnexos}
+
+\cite{koza92} % ELIMINAR CUANDO YA SE TENGA ALGUNA REFERENCIA
+
+% Si se salen de los márgenes las referencias:
+%\newgeometry{left= 3cm, right = 3cm}
+\printbibliography[]
+
 
 \end{document}

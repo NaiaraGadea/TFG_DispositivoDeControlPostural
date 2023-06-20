@@ -3,6 +3,15 @@
 \section{Descripción de los datos.}
 Breve descripción de los datos.
 En caso de tratarse de un trabajo donde los datos son muy importantes, puede haber explicaciones extra en el anexo correspondiente.
+
+En este trabajo no se utilizan tablas de datos.
+
+Nose...
+El dispositivo ideado trabajará con los datos que se obtienen de la monitorización de la postura del usuario, ya se encuentre sentado o de pie, alertando en caso de detección de una postura dañina durante un periodo de tiempo determinado. De esta forma se logrará que se desarrolle una postura natural correcta y, por lo tanto saludable. 
+
+La postura correcta prevendrá de posibles lesiones, u otros daños y el desarrollo correcto de las actividades.
+
+Se trabajarán con los ángulos de rotación o inclinación, aceleraciones en un punto determinado y movimientos que realiza una persona al modificar su postura. Para detectar una correcta o incorrecta postura se establecerá un umbral donde se considerará que la persona está en una buena postura, por lo que, fuera de ese umbral, la persona tendrá una mala postura y el dispositivo emitirá un aviso para que la persona modifique su postura.
  
 \section{Técnicas y herramientas.}
 
@@ -15,31 +24,104 @@ Añadir los posibles sensores, el cable USB, microcontrolador (En mi caso arduin
 \subsection{Aplicaciones empleadas.}
 
 \begin{itemize}
-\item \textbf{Overleaf}: es un editor LaTeX colaborativo en línea, que se emplea para la creación, edición y publicación de documentos científicos. LaTeX es una herramienta que a partir del procesamiento de un documento de texto plano compuesto por texto y comandos LaTeX por el software de TeX engine convierte los comandos LaTeX y el texto del documento en un archivo PDF profesional. Esta es la herramienta que se ha empleado para la realización de este documento. Se puede acceder a través de https://www.overleaf.com  %(Referencia: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX )
+\item \textbf{Overleaf}\cite{Overleaf}: es un editor LaTeX colaborativo en línea, que se emplea para la creación, edición y publicación de documentos científicos. LaTeX es una herramienta que a partir del procesamiento de un documento de texto plano compuesto por texto y comandos LaTeX por el software de TeX engine convierte los comandos LaTeX y el texto del documento en un archivo PDF profesional. Esta es la herramienta que se ha empleado para la realización de este documento. Se puede acceder a través de https://www.overleaf.com  %(Referencia: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX )
 
-\item \textbf{Diagrams.net}: es una aplicación de código abierto para la realización de diagramas online, con gran cantidad de librerías de formas para su realización. Esta aplicación es la que se ha empleado para la realización de la gran mayoría de diagramas del proyecto y los prototipos de interfaz. Se puede acceder a través de: https://www.diagrams.net % Referencia: https://www.diagrams.net/doc/getting-started-editor  
+\item \textbf{Diagrams.net}\cite{Diagrams.net}: es una aplicación de código abierto para la realización de diagramas online, con gran cantidad de librerías de formas para su realización. Esta aplicación es la que se ha empleado para la realización de la gran mayoría de diagramas del proyecto y los prototipos de interfaz. Se puede acceder a través de: https://www.diagrams.net % Referencia: https://www.diagrams.net/doc/getting-started-editor  
 
-\item \textbf{Tinkercad}:es una aplicación web gratuita que permite desarrollar habilidades de diseño 3D, electrónica y programación, sin necesidad de utilizar ningún tipo de software adicional. En este proyecto se ha empleado esta herramienta para la simulación del diseño del circuito electrónico, ya que permite realizar circuitos y componentes desde 0 o empleando sus circuitos predefinidos. Además, esta aplicación consta de un editor de código que permite programar las simulaciones. Se puede acceder a través de: https://www.tinkercad.com %Referencia: https://www.tinkercad.com/circuits 
+\item \textbf{Tinkercad}\cite{Tinkercad}:es una aplicación web gratuita que permite desarrollar habilidades de diseño 3D, electrónica y programación, sin necesidad de utilizar ningún tipo de software adicional. En este proyecto se ha empleado esta herramienta para la simulación del diseño del circuito electrónico, ya que permite realizar circuitos y componentes desde 0 o empleando sus circuitos predefinidos. Además, esta aplicación consta de un editor de código que permite programar las simulaciones. Se puede acceder a través de: https://www.tinkercad.com %Referencia: https://www.tinkercad.com/circuits 
+
+\item \textbf{Arduino}\cite{Arduino1}: plataforma de código abierto de electrónica basada en hardware y software simple y accesible, originalmente creada para la creación rápida de prototipos. Existen diferentes placas de Arduino con distintas funciones. Se puede introducir en el microcontrolador un conjunto de instrucciones que se quiere que realice el dispositivo mediante el uso del software de Arduino (IDE), estas instrucciones están escritas en el lenguaje de programación Arduino, que es similar a C++ pero simplificado, además se puede expandir el lenguaje utilizando distintas bibliotecas C++. Esta plataforma es muy utilizada y ha permitido crear gran variedad de proyectos. Su sencillez, accesibilidad y coste son las principales razones por las que se ha pensado en realizar el prototipo de este proyecto basado en esta plataforma. 
+
+\item \textbf{GitHub}\cite{GitHub}: plataforma gratuita en línea de código abierto cuyo objetivo principal es el desarrollo colaborativo de software, para ello se basa en su sistema de control de versiones. GitHub fue construida empleando herramientas de código abierto cómo  Ruby on Rails, Go, Primer, React o Kafka. Además, esta plataforma permite no solo la creación de proyectos públicos sino que también proyectos privados, que se guardan en la nube. Por otro lado, GitHub también tiene distintas herramientas que mejoran y dinamizan el desarrollo de los proyectos.
+
 
 \end{itemize}
 
 \subsection{Herramientas.}
 AÑADIR IMÁGENES
 \begin{itemize}
-\item \textbf{Arduino}:  plataforma de código abierto de electrónica basada en hardware y software simple y accesible, originalmente creada para la creación rápida de prototipos. Existen diferentes placas de Arduino con distintas funciones. Se puede introducir en el microcontrolador un conjunto de instrucciones que se quiere que realice el dispositivo mediante el uso del software de Arduino (IDE), estas instrucciones están escritas en el lenguaje de programación Arduino, que es similar a C++ pero simplificado, además se puede expandir el lenguaje utilizando distintas bibliotecas C++. Esta plataforma es muy utilizada y ha permitido crear gran variedad de proyectos. Su sencillez, accesibilidad y coste son las principales razones por las que se ha pensado en realizar el prototipo de este proyecto basado en esta plataforma. Se utilizará como microcontrolador la placa de Arduino UNO.
+\item \textbf{Placa de Arduino}\cite{Arduino1,Arduino2}: se utilizará como microcontrolador la placa de Arduino UNO R3. Esta placa es la más sencilla, robusta y utilizada que ofrece Arduino. El microcontrolador basado en ATmega328P. La placa tiene 14 pines digitales y 6 pines analógicos.Además, cuenta con un conector USB, un conector de alimentación, un botón de reinicio, un resonador de cerámica de 16 MHz y cabezal ICSP. \ref{fig:arduino}
 % Referencia: https://www.arduino.cc/en/Guide/Introduction
+% Imagen de la placa de arduino UNO
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/imgArduinoUNO.jpg}
+    \caption{Placa de Arduino UNO.}
+    \label{fig:arduino} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{ProtoBoard}: placa sobre la que se construyen los circuitos electrónicos, se trata de una matriz de clavijas donde se insertan los componentes electrónicos.
+\item \textbf{ProtoBoard}: placa sobre la que se construyen los circuitos electrónicos, se trata de una matriz de clavijas donde se insertan los componentes electrónicos.\ref{fig:protoboard}
+% Imagen de la protoboard.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/imgProtoboards.jpg}
+    \caption{Protoboards.}
+    \label{fig:protoboard} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{Cableado}: permiten la conexión del circuito.
+\item \textbf{Cableado}: alambres de un material conductor cubiertos por un material aislante que permiten las distintas conexiones del circuito.\ref{fig:cableado}
+% Imagen del los cables que se usarán
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/imgCableado.jpg}
+    \caption{Cables de conexiones para arduino.}
+    \label{fig:cableado} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{Resistencias}: componentes electrónicos que limitan el flujo de energía eléctrica del circuito.
+\item \textbf{Resistencias}: componentes electrónicos que limitan el flujo de energía eléctrica del circuito. El valor de cada resistencia viene dado por un código de colores.\ref{fig:resistencias}
+% Imagen de las resistencias.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/imgResistencias.jpg}
+    \caption{Distintas resistencias.}
+    \label{fig:resistencias} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{Leds}: diodo que se ilumina cuando pasa una corriente eléctrica por él.
+\item \textbf{Leds}: diodo que se ilumina cuando pasa una corriente eléctrica por él. Existen leds de diferentes colores.\ref{fig:leds}
+% imagen de los leds
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/imgLeds.jpg}
+    \caption{Leds de diferentes colores.}
+    \label{fig:leds} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{Pulsador}: para poder encender o apagar el dispositivo.
+\item \textbf{Pulsador}: componente que según su estado permite cortar o admitir el paso de corriente. En función de su estado se realizará una acción específica u otra.\ref{fig:pulsador}
+% Imagen de pulsadores de arduino
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/imgPulsador.jpg}
+    \caption{Pulsadores.}
+    \label{fig:pulsador} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 
-\item \textbf{Cable USB}: permite introducir las instrucciones programadas en un ordenador a la placa de Arduino.
+\item \textbf{Cable USB}: conector que permite introducir las instrucciones programadas en un ordenador a la placa de Arduino.\ref{fig:cableUSB}
+% Imagen del cable USB que conecta el arduino
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/imgCableUSB.jpg}
+    \caption{Cable USB.}
+    \label{fig:cableUSB} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+\item \textbf{Motor de vibración}: un componente electrónico que al alimentarlo causa un efecto vibratorio. En este proyecto su finalidad será la de alertar al usuario mediante un biofeedback de señal vibratoria.\ref{fig:motorVibr}
+% Imagen de un motor de vibración
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/MotorVibr.jpg}
+    \caption{Motor de vibración.}
+    \label{fig:motorVibr} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+\item \textbf{Zumbador pasivo}: un transductor electroacústico que transforma una señal acústica en un efecto sonoro. En este proyecto su finalidad será la de alertar al usuario mediante un biofeedback de señal sonora.\ref{fig:zumbador}
+% Imagen de un zumbador pasivo.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/SW520D.png}
+    \caption{Zumbador pasivo.}
+    \label{fig:zumbador} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
 
 \end{itemize}
 
@@ -48,11 +130,120 @@ AÑADIR IMÁGENES
 
 AÑADIR IMÁGENES Y CREAR TABLA DE COMPARACIÓN
 \begin{itemize}
-    \item \textbf{Módulo SCA60C}: es un módulo que consta de un sensor de ángulo SCA60C y un acelerómetro N100060. Gracias a este sensor se pueden medir ángulos de 0 a 180º, con resolución de un grado, con un voltaje de entrada de 5 voltios y una tensión de salida en función del ángulo de 0,45 - 4,5 voltios. La corriente que necesita módulo ronda los 2 mA. Este módulo admite distintos rangos de medición y se utiliza para multitud de aplicaciones en las que se necesite conocer constantemente el ángulo de giro. 
+    \item \textbf{Módulo SCA60C}\cite{}: es un módulo que consta de un sensor de ángulo SCA60C y un acelerómetro N100060. Gracias a este sensor se pueden medir ángulos de 0 a 180º, con resolución de un grado, con un voltaje de entrada de 5 voltios y una tensión de salida en función del ángulo de 0,45 - 4,5 voltios. La corriente que necesita módulo ronda los 2 mA. Este módulo admite distintos rangos de medición y se utiliza para multitud de aplicaciones en las que se necesite conocer constantemente el ángulo de giro. 
+% Imagen Módulo SCA60C
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.3\textwidth]{img/imgSCA60C.jpg}
+    \caption{Módulo SCA60C\cite{imgSCA60C}.}
+    \label{fig:SCA60C} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
     
-    \item \textbf{Galgas extensiométricas y módulo HX711}: se trata de un conjunto cuyo objetivo es medir el peso, basado en un transductor de galgas extensiométricas y un módulo HX711 que actúa como amplificador de la señal y transfiere los datos al microcontrolador. La galga extensiométrica o celda de carga es un transductor que convierte la tensión generada por los cambios en la longitud de un objeto a una señal eléctrica, en función del peso que se quiere medir existen distintas celdas de carga. Mientras que el módulo HX711 consta de un amplificador y un convertidor analógico-digital HX711, que permite la amplificación de la señal producida por la galga extensiométrica. Este módulo utiliza un puente de Weahstone para convertir la fuerza aplicada en una señal analógica. Necesita una tensión de entrada de 5 voltios y el resultado se puede obtener en g, kg o Newtons. La utilización de este módulo requiere de la librería de Arduino hx711. El precio ronda los 10-15€.
-    
+    \item \textbf{Galgas extensiométricas y módulo HX711}\cite{GyHX711}: se trata de un conjunto cuyo objetivo es medir el peso, basado en un transductor de galgas extensiométricas y un módulo HX711 que actúa como amplificador de la señal y transfiere los datos al microcontrolador. La galga extensiométrica o celda de carga es un transductor que convierte la tensión generada por los cambios en la longitud de un objeto a una señal eléctrica, en función del peso que se quiere medir existen distintas celdas de carga. Mientras que el módulo HX711 consta de un amplificador y un convertidor analógico-digital HX711, que permite la amplificación de la señal producida por la galga extensiométrica. Este módulo utiliza un puente de Weahstone para convertir la fuerza aplicada en una señal analógica. Necesita una tensión de entrada de 5 voltios y el resultado se puede obtener en g, kg o Newtons. La utilización de este módulo requiere de la librería de Arduino hx711. El precio ronda los 10-15€.
+% Imagen de galgas extensiometricas y el módulo HX711
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.3\textwidth]{img/GyHX711.jpg}
+    \caption{Galgas extensiométricas y módulo HX711\cite{imgGyHX711}.}
+    \label{fig:HX711} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
     \item \textbf{Acelerómetro ADXL345}: es un acelerómetro micromecanizado (MEMS) capacitivo de 3 grados de Libertad (3DOF) acoplado a un bloque de memoria FIFO que almacena hasta 32 conjuntos de coordenadas. Además, es compatible con un procesador como Arduino mediante conexio por bus SPI o bus I2C. Este dispositivo permite conocer la orientación del sensor por la acción de la fuerza de gravedad basándose en la detección de la aceleración en los ejes X, Y y Z. Se trata de un dispositivo de ultra bajo consumo utilizando en funcionamiento con unos 45 $\mu$A de corriente mientras que en Stand-By solamente usa unos 0,1 $\mu$A. Necesita una tensión de alimentación de unos 2 a 3,6 voltios. El rango de medición del dispositivo es ajustable, con resolución de hasta 13 bits y sensibilidad de 40 mg/LBS.
-    
-    \item \textbf{IMU MPU-6050}: es un módulo de unidad de medición inercial de 6 grados de libertad (6 DOF) fabricado por Invensense, que permite conocer la posición del sensor en todo momento. Este módulo consta de un acelerómetro de 3 ejes, un giroscopio de 3 ejes, conversores analógico a digital (ADC) de 16 bits, un sensor de temperatura, un reloj de alta precisión e interrupciones programables y un procesador interno (DMP Digital Motion Porcessor). Tanto el rango del acelerómetro como del giroscopio son ajustables. Este módulo se acopla mediante un bus SPI o un bus I2C, necesita una tensión de alimentación de unos 2,4 - 3,6 voltios y consume unos 3,5 mA al tener todos sus componentes activados. Es uno de los sensores más empleados y tiene un coste de unos 6-15€.
+% Imagen del acelerómetro ADXL345
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.2\textwidth]{img/ADXL345.jpeg}
+    \caption{Acelerómetro ADXL345\cite{imgADXL345}.}
+    \label{fig:ADXL345} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+    \item \textbf{Módulo SW520D}\cite{SW520D_1}: Sensor de inclinacion formado por sensores Tilt de doble esfera. Este sensor funciona como un intrerruptor y tiene una salida digital, al inclinar el sensor las 2 esferas actúan de puente y cierran el circuito. El código de programación de este dispositivo es similar al de un interruptor. Se trata de un sensor muy sensible a movimientos bruscos y vibraciones. Sin embargo es un sensor muy barato.
+    % Referencia: 
+    % https://www.luisllamas.es/medir-inclinacion-con-arduino-y-sensor-tilt-sw-520d/
+% Imagen del sensor SW520D
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/imgSW520D_diag.png}
+    \caption{Sensor SW520D\cite{imgSW520D} y diagrama de su funcionamiento.}
+    \label{fig:imgSW520D} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+% Diagrama del sensor SW520D
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/SW520D.png}
+    \caption{Diagrama de las conexiones del sensor SW520D.}
+    \label{fig:SW520D} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+    \item \textbf{IMU MPU-6050}: es un módulo de unidad de medición inercial de 6 grados de libertad (6 DOF) fabricado por Invensense, que permite conocer la posición del sensor en todo momento. Este módulo consta de un acelerómetro de 3 ejes, un giroscopio de 3 ejes, conversores analógico a digital (ADC) de 16 bits, un sensor de temperatura, un reloj de alta precisión e interrupciones programables y un procesador interno (DMP Digital Motion Porcessor). Tanto el rango del acelerómetro como del giroscopio son ajustables. Este módulo se acopla mediante un bus SPI o un bus I2C, necesita una tensión de alimentación de unos 2,4 - 3,6 voltios, aunque hay algunos módulos que tienen incluido un regulador de voltaje que permite su conexión a un voltaje de 5V, y consume unos 3,5 mA al tener todos sus componentes activados. Es uno de los sensores más empleados y tiene un coste de unos 6-15€.
+% Imagen del módulo MPU6050
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.2\textwidth]{img/imgMPU6050.jpg}
+    \caption{Módulo MPU-6050\cite{imgMPU6050}.}
+    \label{fig:imgMPU6050} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+% Diagrama del sensor MPU6050
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/MPU6050.png}
+    \caption{Diagrama de las conexiones del módulo MPU6050.}
+    \label{fig:MPU6050} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+    \item \textbf{Módulo MPU-9250}: es un sensor de 9 grados de libertad (9DOF) que permite medir la inclinacion y la aceleración en los 3 ejes. Este módulo incluye un acelerómetro, un giroscopio y un magnetómetro. Al incluir el magenetómetro se elimina la deriva que puede darse tras horas de uso en dispositivos que no tengan este componente. Además, este módulo se acopla mediante bus SPI o por bus I2C. Este sensor necesita una alimentación de entrada de unos 2.4 a 3.6 V, aunque hay algunos módulos que tienen incluido un regulador de voltaje que permite su conexión a un voltaje de 5V. Para programar este módulo es necesaria la librería de Arduino MPU9250.
+% Imagen del módulo MPU9250
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.15\textwidth]{img/imgMPU9250.jpg}
+    \caption{Módulo MPU-9250\cite{imgMPU9250}.}
+    \label{fig:imgMPU9250} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
+% Diagramas del sensor MPU9250
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/MPU9250Regulador.png}
+    \caption{Diagrama del módulo MPU9250 con regulador de voltaje.}
+    \label{fig:MPU9250R} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/MPU9250SinRegulador.png}
+    \caption{Diagrama del módulo MPU9250 sin regulador de voltaje.}
+    \label{fig:MPU9250} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
+
 \end{itemize}
+
+
+% ----------------------------------------------------
+% Tabla de comparación de sensores
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |m{4cm}|m{8cm}|m{2cm}|  } 
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{Módulos} & \cellcolor[HTML]{B9E3F0}\textbf{Características} & \cellcolor[HTML]{B9E3F0}\textbf{Precio}\\
+
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{SCA60C}             & {Mide ángulos de 0-180º y necesita una tensión de entrada de 5V}   & 15-25€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Galgas extensiométricas y módulos HX711}                & {Mide el peso que se ejerce sobre la galga, existen distintas galgas en función del peso a medir y necesita una tensión de entrada de 5V} & 6-15€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{ADXL345}                & {Tiene 3 DOF, mide las aceleraciones en los 3 ejes y necesita una tensión de entrada de 2-3.6V} & 3-10€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{MPU6050}                & {Tiene 6 DOF, mide aceleraciones y ángulso de rotación en los 3 ejes y necesita una tensión de entrada de 2.4-3.6V} & 5-15€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{SW520D}                & {Detecta inclinaciones, es un sensor muy sencillo y actúa como un interruptor. Necesita una tensión de entrada de 5V.} & 0.3-5€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{MPU9250}                & {Tiene 9 DOF, mide aceleraciones, ángulos y campos magnéticos en los 3 ejes. Elimina la deriva y necesita una tensión de entrada de 2.4 a 3.6V} & 10-20€\\
+\hline
+\end{tabular}
+\caption{Resumen y comparación de posibles sensores o módulos que se pueden emplear en el proyecto}
+\end{table}
+
+
+
+Para la realización del prototipo realizado en este proyecto se han seleccionados los módulos SW520D y MPU6050, por sus características, sencillez de uso, precio y disponibilidad. 

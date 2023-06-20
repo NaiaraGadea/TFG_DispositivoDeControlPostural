@@ -5,10 +5,78 @@
 Ojo \footnote{Los anexos deben de tener su propia bibliografía, eso es tan fácil como utilizar referencias igual que en la memoria \cite{bortolot2005}}
 
 \section{Planificación temporal}
-
+% Inicio de la figura
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{img/PlanificacionTemporal.png}
+    \caption{Planificación temporal seguida para la realización de este proyecto.}
+    \label{fig:planTemporal} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+\end{figure}
 Añadir una imagen con los hitos por semanas unas 14 semanas aprox aunque puede variar en funcion se vaya avanzando, en cuyo caso se volverá a modificar la tabla
 
 \subsection{Planificación económica}
+Para la planificación económica se han planeado los precios más bajos encontrados de los componentes necesarios.
+
+Para la versión 1 y los materiales empleados se tiene ...
+%\usepackage{siunitx}
+\begin{itemize}
+    \item Arduino UNO R3: 24€
+    \item Resitencias (2x330 \textOmega, 220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.05€
+    \item Zumbador pasivo: 0.25€
+    \item Motor de vibración: 1€
+    \item transistor: 0.05€
+    \item SW520D: 0.5€
+    \item Led azul: 0.02€
+    \item pulsador: 0.05€
+    \item Otros elementos variados: 1€
+    
+\end{itemize}
+
+Este prototipo tendrá un coste aproximado de 27€, pudiendo a producirse una gran bajada de precio al crear nuestro propio microcontrolador o utilizar una alternativa similar a arduino. Puesto que simplemente la suma de los componentes tienen un coste de unos 3€.
+Además hay que añadir un 15\% del precio total que se utilizara para los gastos de gestion.
+Para la versión 2 se ha empleado....
+
+
 
 \subsection{Viabilidad legal}
 
+Respecto a la viabilidad legal es respecto a que partes del desarrollo o comercialización  pueden pararse por problemas legales.
+
+Datos almacenados de los usuarios.
+
+Incluir que debe cumplir con la ley de protección de datos...
+
+Si el dispositivo se llegase a crear y se quiera sacar a mercado deberá cumplir con los requisitos de dispositivos médicos que garantice en todo momento la protección de los usuarios a los que está enfocado. Alguna de las leyes que se deberán tener en cuenta son:
+\begin{itemize}
+    %\item Directiva 2014/35/UE del Parlamento Europeo y del Consejo aprobada el 26 de febrero de 2014 sobre la armonización de las legislaciones de los Estados miembros en materia de comercialización  de material eléctrico destinado a utilizarse con determinados límites de tensión. % fuera porque este dispositivo utiliza poca corriente. esta directiva está dirigida a dispositivos que emplean una tensión comprendida entre 50 y 1000 V en corriente alterna y entre 75 y 1500 V en corriente continua.
+    % https://www.boe.es/doue/2014/096/L00357-00374.pdf
+    \item Directiva 2014/30/UE aprobada el 26 de febrero de 2014 aprobada por el Parlamento Europeo y el Consejo sobre la armonización de las legislaciones de los Estados miembros en materia de compatibilidad electromagnética (refundición). Establece que los dispositivos electrónicos que se comercializan en Europa cumplan con los requisitos de compatibilidad electromagnética.
+    % https://www.boe.es/doue/2014/096/L00079-00106.pdf
+    \item Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales. Para poder proteger cualquier información que identifique a una persona, de forma confidencial. Además, el usuario debe estar correctamente informado del tratamiento de sus datos, ademas el acceso al tratamiento de sus datos debe ser claro y accesible.
+
+    El usuario tendrá derecho al acceso de sus datos, derecho de rectificación y supresión de sus datos, derecho a la limitación del tratamiento de sus datos, derecho a la portabilidad de sus datos y el derecho a oponerse al tratamiento de sus datos. Por todo ello el tratamiento de sus datos debe ser tras la confirmación clara del consentimiento informado del tratamiento de sus datos.
+    
+    \item Reglamento UE 2016/679 relativo a Protección de las Personas Físicas en lo que respecta al tratamiento de datos personales y circulación de estos Datos. Donde se define que se debe garantizar la protección de los datos con los que se trabaja, además de notificar brechas de seguridad o exposición de datos al usuario.
+
+    \item Ley 21/2014, de 4 de noviembre, por la que se modifica el texto refundido de la Ley de Propiedad Intelectual 
+
+    \item La Ley 34/2.002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, en caso de que se realice una tienda web oficial de comercialización del dispositivo.
+    \item La Ley 56/2007 de 28 de Diciembre, de Medidas de Impulso de la Sociedad de la Información 
+
+    \item Ley 24/2015, Ley de Patentes, donde se regula todo lo relacionado con invenciones empleando patentes.
+    % Referencia: 
+    % https://www.boe.es/buscar/act.php?id=BOE-A-2015-8328
+    
+    \item Además, se debera tener en cuenta la Ley 7/1996, de 15 de enero, de Ordenación del Comercio Minorista.
+    
+    \item normativa de sanidad
+    
+    \item Normativa laboral
+    \item Normativa de fases de prueba.
+    \item En función de los problemas que pueden surgir... Dividir en 3 fases, creación de la idea, diseño y desarrollo y producción de pruebas, venta y posventa(demandas y gestion de los datos). Se debe tener en cuenta que el dispositivo tenga un funcionamiento seguro que no afecte negativamente al usuario.
+    
+\end{itemize}
+
+Además el dispositivo deberá contar con un certificado CE, que garantizará que el dispositivo cumple con los requisitos de seguridad, protección y sanidad europeos. Una vez se obtenga el certificado el dispositivo podrá ser comercializado legalmente en la Unión Europea.
+% Referencia:
+%https://europa.eu/youreurope/business/product-requirements/labels-markings/ce-marking/index_es.htm
