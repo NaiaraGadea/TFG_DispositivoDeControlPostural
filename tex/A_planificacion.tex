@@ -12,33 +12,80 @@ Ojo \footnote{Los anexos deben de tener su propia bibliografía, eso es tan fác
     \caption{Planificación temporal seguida para la realización de este proyecto.}
     \label{fig:planTemporal} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
 \end{figure}
-Añadir una imagen con los hitos por semanas unas 14 semanas aprox aunque puede variar en funcion se vaya avanzando, en cuyo caso se volverá a modificar la tabla
+% Añadir una imagen con los hitos por semanas unas 14 semanas aprox aunque puede variar en funcion se vaya avanzando, en cuyo caso se volverá a modificar la tabla
 
-\subsection{Planificación económica}
-Para la planificación económica se han planeado los precios más bajos encontrados de los componentes necesarios.
+\section{Planificación económica}
+Para obtener una buena planificación económica se deberán identificar los gastos y los ingresos relacionados con el desarrollo del producto.
 
-Para la versión 1 y los materiales empleados se tiene ...
+Como primeros gastos incluiremos el precio de los componentes y los gastos de producción, mientras que para obtener los ingresos se tendrá en cuenta el beneficio, gastos imprevistos e I+D del producto, para posibles mejoras en e futuro. La suma de gastos e ingresos nos devolverá el precio final del dispositivo.
+
+
+% ----------------------------------------------------
+% Tabla del desglose económico de las versiones realizadas.
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |m{4cm}|m{4cm}|m{2cm}|m{2cm}|  } 
+\hline
+\cellcolor[HTML]{B9E3F0}\textbf{} & \cellcolor[HTML]{B9E3F0}\textbf{Cálculos} & \cellcolor[HTML]{B9E3F0}\textbf{Versión 1}& \cellcolor[HTML]{B9E3F0}\textbf{Versión 2}\\
+
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Gastos de los componentes}             & {Suma de los precios de cada componente del producto}   & 27€ & 32.5€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Gastos de producción}                & {10\% del precio de los componentes} & 2.7€ & 3.25€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Ingresos destinados a beneficio}                & {5\% del total de gastos} & 1.48€ & 1.79€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Gastos imprevistos e I+D} & {10\% del total de gastos} & 2.97€ & 3.58€\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Precio Total} & {Suma de los gastos e ingresos} & \textbf{34.15€} & \textbf{41.10€}\\
+\hline
+\end{tabular}
+\caption{Resumen de gastos y precio total del producto}
+\end{table}
+
+El prototipo de la versión 1, en la que se emplea el sensor SW520D, tiene un coste final aproximado\footnote{La planificación económica será variable en el tiempo y durante el desarrollo del producto, por lo que se trata de precios totales aproximados. Igual para el prototipo versión 2.} de unos 34.15€, precio que podría ser menor al crear nuestro propio microcontrolador o utilizar una alternativa similar a arduino, puesto que es el elemento que más aumenta el precio de la solución, siendo el precio del resto de los componentes aproximadamente unos 3€.
+
+El prototipo de la versión 2, en la que se emplea el sensor SW520D, tiene un coste final aproximado de unos 41.10€, precio que también podría disminuir al crear nuestro propio microcontrolador o utilizar una alternativa a arduino, ya que sin el microcontrolador Arduino el precio ronda los 8.5€.
+
+
+\subsection{Desglose de los precios de los componentes del prototipo Versión 1}
+
+Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
 %\usepackage{siunitx}
 \begin{itemize}
     \item Arduino UNO R3: 24€
-    \item Resitencias (2x330 \textOmega, 220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.05€
+    \item Resitencias (330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.05€
     \item Zumbador pasivo: 0.25€
     \item Motor de vibración: 1€
-    \item transistor: 0.05€
+    \item Transistor: 0.05€
     \item SW520D: 0.5€
     \item Led azul: 0.02€
-    \item pulsador: 0.05€
+    \item Pulsador: 0.05€
     \item Otros elementos variados: 1€
     
 \end{itemize}
 
-Este prototipo tendrá un coste aproximado de 27€, pudiendo a producirse una gran bajada de precio al crear nuestro propio microcontrolador o utilizar una alternativa similar a arduino. Puesto que simplemente la suma de los componentes tienen un coste de unos 3€.
-Además hay que añadir un 15\% del precio total que se utilizara para los gastos de gestion.
-Para la versión 2 se ha empleado....
+\subsection{Desglose de los precios de los componentes del prototipo Versión 2}
+
+Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
+%\usepackage{siunitx}
+\begin{itemize}
+    \item Arduino UNO R3: 24€
+    \item Resitencias (2x330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.06€
+    \item Zumbador pasivo: 0.25€
+    \item Motor de vibración: 1€
+    \item Transistor NPN: 0.05€
+    \item MPU-6050: 6€
+    \item Led azul: 0.02€
+    \item 2xPulsador: 0.10€
+    \item Otros elementos variados: 1€
+    
+\end{itemize}
 
 
 
-\subsection{Viabilidad legal}
+
+\section{Viabilidad legal}
 
 Respecto a la viabilidad legal es respecto a que partes del desarrollo o comercialización  pueden pararse por problemas legales.
 
@@ -46,7 +93,7 @@ Datos almacenados de los usuarios.
 
 Incluir que debe cumplir con la ley de protección de datos...
 
-Si el dispositivo se llegase a crear y se quiera sacar a mercado deberá cumplir con los requisitos de dispositivos médicos que garantice en todo momento la protección de los usuarios a los que está enfocado. Alguna de las leyes que se deberán tener en cuenta son:
+Si el dispositivo se llegase a crear y se pudiera sacar a mercado deberá cumplir con los requisitos legales de dispositivos médicos que garantice en todo momento la protección de los usuarios a los que está enfocado el dispositivos. Alguna de las leyes que se deberán tener en cuenta son:
 \begin{itemize}
     %\item Directiva 2014/35/UE del Parlamento Europeo y del Consejo aprobada el 26 de febrero de 2014 sobre la armonización de las legislaciones de los Estados miembros en materia de comercialización  de material eléctrico destinado a utilizarse con determinados límites de tensión. % fuera porque este dispositivo utiliza poca corriente. esta directiva está dirigida a dispositivos que emplean una tensión comprendida entre 50 y 1000 V en corriente alterna y entre 75 y 1500 V en corriente continua.
     % https://www.boe.es/doue/2014/096/L00357-00374.pdf
