@@ -1,8 +1,7 @@
 \apendice{Plan de Proyecto Software}
 
 \section{Introducción}
-
-Ojo \footnote{Los anexos deben de tener su propia bibliografía, eso es tan fácil como utilizar referencias igual que en la memoria \cite{bortolot2005}}
+Para el correcto desarrollo del proyecto se seguirá una planificacion temporal y se desarrollara una planificacion economica para ver el coste economico aproximado del producto desarrollado a lo largo del proyecto. Además, se dispondrá de un apartado donde consultar la viabilidad legal de proyecto.
 
 \section{Planificación temporal}
 % Inicio de la figura
@@ -51,7 +50,6 @@ El prototipo de la versión 2, en la que se emplea el sensor SW520D, tiene un co
 \subsection{Desglose de los precios de los componentes del prototipo Versión 1}
 
 Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
-%\usepackage{siunitx}
 \begin{itemize}
     \item Arduino UNO R3: 24€
     \item Resitencias (330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.05€
@@ -68,7 +66,6 @@ Se han tenido en cuenta los precios más bajos encontrados de cada componente ne
 \subsection{Desglose de los precios de los componentes del prototipo Versión 2}
 
 Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
-%\usepackage{siunitx}
 \begin{itemize}
     \item Arduino UNO R3: 24€
     \item Resitencias (2x330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.06€
@@ -86,44 +83,68 @@ Se han tenido en cuenta los precios más bajos encontrados de cada componente ne
 
 
 \section{Viabilidad legal}
-
+\begin{comment}
 Respecto a la viabilidad legal es respecto a que partes del desarrollo o comercialización  pueden pararse por problemas legales.
 
 Datos almacenados de los usuarios.
+\end{comment}
 
-Incluir que debe cumplir con la ley de protección de datos...
+Se debe tener en cuenta en todo momento que el dispositivo sea completamente seguro y no afecte negativamente al usuario. Para ello, existen legislaciones específicas a cada fase del desarrollo y comercialización del producto que se deben cumplir para obtener un dispositivo seguro y regulado.
 
-Si el dispositivo se llegase a crear y se pudiera sacar a mercado deberá cumplir con los requisitos legales de dispositivos médicos que garantice en todo momento la protección de los usuarios a los que está enfocado el dispositivos. Alguna de las leyes que se deberán tener en cuenta son:
+Se pueden diferenciar 3 fases, una primera fase de creación de la idea, diseño y desarrollo y realización de pruebas, una segunda fase de comercialización y la última fase de posventa, donde se incluyen las demandas y la gestión de los datos de los usuarios.
+
+Durante la primera fase de creación de la idea, diseño y desarrollo del producto y realización de pruebas, todos los movimientos que se realicen se deberán ajustar a las siguientes legislaciones:
 \begin{itemize}
-    %\item Directiva 2014/35/UE del Parlamento Europeo y del Consejo aprobada el 26 de febrero de 2014 sobre la armonización de las legislaciones de los Estados miembros en materia de comercialización  de material eléctrico destinado a utilizarse con determinados límites de tensión. % fuera porque este dispositivo utiliza poca corriente. esta directiva está dirigida a dispositivos que emplean una tensión comprendida entre 50 y 1000 V en corriente alterna y entre 75 y 1500 V en corriente continua.
-    % https://www.boe.es/doue/2014/096/L00357-00374.pdf
-    \item Directiva 2014/30/UE aprobada el 26 de febrero de 2014 aprobada por el Parlamento Europeo y el Consejo sobre la armonización de las legislaciones de los Estados miembros en materia de compatibilidad electromagnética (refundición). Establece que los dispositivos electrónicos que se comercializan en Europa cumplan con los requisitos de compatibilidad electromagnética.
-    % https://www.boe.es/doue/2014/096/L00079-00106.pdf
-    \item Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales. Para poder proteger cualquier información que identifique a una persona, de forma confidencial. Además, el usuario debe estar correctamente informado del tratamiento de sus datos, ademas el acceso al tratamiento de sus datos debe ser claro y accesible.
-
-    El usuario tendrá derecho al acceso de sus datos, derecho de rectificación y supresión de sus datos, derecho a la limitación del tratamiento de sus datos, derecho a la portabilidad de sus datos y el derecho a oponerse al tratamiento de sus datos. Por todo ello el tratamiento de sus datos debe ser tras la confirmación clara del consentimiento informado del tratamiento de sus datos.
-    
-    \item Reglamento UE 2016/679 relativo a Protección de las Personas Físicas en lo que respecta al tratamiento de datos personales y circulación de estos Datos. Donde se define que se debe garantizar la protección de los datos con los que se trabaja, además de notificar brechas de seguridad o exposición de datos al usuario.
-
-    \item Ley 21/2014, de 4 de noviembre, por la que se modifica el texto refundido de la Ley de Propiedad Intelectual 
-
-    \item La Ley 34/2.002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, en caso de que se realice una tienda web oficial de comercialización del dispositivo.
-    \item La Ley 56/2007 de 28 de Diciembre, de Medidas de Impulso de la Sociedad de la Información 
-
-    \item Ley 24/2015, Ley de Patentes, donde se regula todo lo relacionado con invenciones empleando patentes.
+    \item Ley 24/2015\cite{patentes}, Ley de Patentes, donde se regula todo lo relacionado con la protección de invenciones empleando patentes, desde el registro de las patentes, invenciones patentables, el derecho a la patente y los procedimientos para pedir una patente.
     % Referencia: 
     % https://www.boe.es/buscar/act.php?id=BOE-A-2015-8328
     
-    \item Además, se debera tener en cuenta la Ley 7/1996, de 15 de enero, de Ordenación del Comercio Minorista.
+    \item Real Decreto Legislativo 1/1996\cite{PropIntelectual} relativo Ley de Propiedad Intelectual que regulariza la protección del derecho de autor y de derechos similares.
+    % referencia:
+    % https://boe.es/buscar/act.php?id=BOE-A-1996-8930
     
-    \item normativa de sanidad
+    \item Los productos sanitarios se rigen por la Agencia española de medicamentos y productos sanitarios (AEMPS)\cite{AEMPS}. En este proyecto nos interesan especialmente el Real Decreto 1591/2009\cite{prodSanitario1} que regula todo lo relativo a los productos sanitarios, desde su desarrollo a su venta, y el Real Decreto 437/2002\cite{prodSanitario2} establece las pautas para la concesión de licencias de fabricación y desarrollo de productos sanitarios.
+    % Referencias:
+    % https://www.aemps.gob.es/productos-sanitarios/legislacion-sobre-productos-sanitarios/
+    % https://www.boe.es/buscar/doc.php?id=BOE-A-2009-17606
+    % https://www.boe.es/buscar/doc.php?id=BOE-A-2002-10228
     
-    \item Normativa laboral
-    \item Normativa de fases de prueba.
-    \item En función de los problemas que pueden surgir... Dividir en 3 fases, creación de la idea, diseño y desarrollo y producción de pruebas, venta y posventa(demandas y gestion de los datos). Se debe tener en cuenta que el dispositivo tenga un funcionamiento seguro que no afecte negativamente al usuario.
+    \item Reglamento de la UE 2017/745\cite{ProdSanitariosEU} de Productos Sanitarios de la Union Europea este reglamento establece requisitos y regula la comercialización de productos sanitarios en la Unión Europea, con el fin de garantizar un dispositivo de calidad, eficaz y completamente seguro.
+    % Referencia:
+    % https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=uriserv:OJ.L_.2017.117.01.0001.01.SPA&toc=OJ:L:2017:117:TOC
+    
+    \item Además, durante todo el desarrollo del producto se deberá cumplir con la normativa laboral española\cite{normaLaboral}, que incluye leyes y reglamentos como pueden ser el Estatuto de los Trabajadores, la Ley de Prevención de Riesgos Laborales o la Ley de Igualdad.
+    % Referencia
+    % https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=93&modo=2&nota=0&tab=2
     
 \end{itemize}
 
-Además el dispositivo deberá contar con un certificado CE, que garantizará que el dispositivo cumple con los requisitos de seguridad, protección y sanidad europeos. Una vez se obtenga el certificado el dispositivo podrá ser comercializado legalmente en la Unión Europea.
+Si se consigue crear el dispositivo en base a todas las leyes anteriores y se quisiera sacar a mercado se deberán cumplir también con los siguientes requisitos legales:
+\begin{itemize}
+    \item La Ley 34/2002\cite{comercioElectronico} de Servicios de la Sociedad de la Información y de Comercio Electrónico, en caso de que se realice una tienda web oficial de comercialización del dispositivo.
+    % Referencia:
+    % https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758
+    
+    \item Además, se deberan tener en cuenta otras leyes\cite{comercio} como la Ley 7/1996\cite{comercioMinorista} de Ordenación del Comercio Minorista.
+    % Referencia:
+    % https://www.boe.es/buscar/act.php?id=BOE-A-1996-1072
+    % https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=35&modo=2&nota=0&tab=2
+\end{itemize}
+
+Por último, si el dispositivo se ha puesto a la venta se debe pensar en los requisitos legales que se necesitarán cumplir a partir del momento de la primera venta. Alguno de estos requisitos serán:
+\begin{itemize}
+    \item Ley Orgánica 3/2018\cite{protDatos} de Protección de Datos Personales y garantía de los derechos digitales. Para poder proteger cualquier información que identifique a una persona, de forma confidencial. Además, el usuario debe estar correctamente informado del tratamiento de sus datos, ademas el acceso al tratamiento de sus datos debe ser claro y accesible.
+
+    El usuario tendrá derecho al acceso de sus datos, derecho de rectificación y supresión de sus datos, derecho a la limitación del tratamiento de sus datos, derecho a la portabilidad de sus datos y el derecho a oponerse al tratamiento de sus datos. Por todo ello el tratamiento de sus datos debe ser tras la confirmación clara del consentimiento informado del tratamiento de sus datos.
+    % Referencia:
+    % https://www.boe.es/buscar/doc.php?id=BOE-A-2018-16673
+
+    \item Reglamento UE 2016/679\cite{protDatosEU} relativo a Protección de las Personas Físicas en lo que respecta al tratamiento de datos personales y circulación de estos Datos. Donde se define que se debe garantizar la protección de los datos con los que se trabaja, además de notificar brechas de seguridad o exposición de datos al usuario.
+    % Referencia:
+    % https://eur-lex.europa.eu/ES/legal-content/summary/general-data-protection-regulation-gdpr.html
+\end{itemize}
+
+
+Además el dispositivo deberá contar con un certificado CE\cite{certificadoEuropeo}, que garantizará que el dispositivo cumple con los requisitos de seguridad, protección y sanidad europeos. Una vez se obtenga el certificado el dispositivo podrá ser comercializado legalmente en la Unión Europea.
 % Referencia:
-%https://europa.eu/youreurope/business/product-requirements/labels-markings/ce-marking/index_es.htm
+% https://europa.eu/youreurope/business/product-requirements/labels-markings/ce-marking/index_es.htm
