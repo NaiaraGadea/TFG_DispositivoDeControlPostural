@@ -2,6 +2,8 @@
 
 \section{Requisitos software y hardware para ejecutar el proyecto.}
 %Añadir requisitos y tablas de requisitos, pensar si se quieren dividir en requisitos funcionales y no funcionales.
+En esta sección del anexo se definen varios requisitos tanto de software como de hardware que requiere el dispositivo objeto de este trabajo. Cuantos más requisitos cumpla el prototipo más exitoso resultará el dispositivo. 
+
 \subsection{Requisitos funcionales}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-01 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,6 +105,7 @@ Prioridad                              & \multicolumn{1}{c|}{Baja}              
 \label{RF_07}
 \end{table}
 
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% RF-08 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[]
 \begin{tabular}{|
@@ -117,7 +120,8 @@ Prioridad                              & \multicolumn{1}{c|}{Media}             
 \label{RF_08}
 \end{table}
 
-\clearpage
+%\clearpage
+
 \subsection{Requisitos no funcionales}
 \begin{itemize}
     \item \textbf{Accesibilidad}: la aplicación debe ser accesible para el mayor grupo de personas posible, tengan o no algún tipo de discapacidad.
@@ -126,7 +130,7 @@ Prioridad                              & \multicolumn{1}{c|}{Media}             
     \item \textbf{Eficiencia}: la aplicación debe permitir al usuario lograr sus objetivos, con un coste computacional y temporal bajo.
     \item \textbf{Efectividad}: la aplicación debe cumplir con exactitud los requisitos funcionales. 
     \item \textbf{Errores}: la aplicación debe presentar una tasa de error baja, además debe mostrar posibles soluciones en caso de anomalías.
-    \item \textbf{Aprendizaje}: tanto el uso del dispositivo electrónico como de la aplicación debe ser sencillo, es decir, se debe poder usar de forma intuitiva.
+    \item \textbf{Usabilidad}: tanto el uso del dispositivo electrónico como de la aplicación debe ser sencillo, es decir, se debe poder usar de forma intuitiva.
     \item \textbf{Memorabilidad}: tanto el funcionamiento del dispositivo electrónico como de la aplicación debe ser fácil de recordar, tras no haberlos utilizado durante un tiempo.
     \item \textbf{Satisfacción}: el usuario debe estar satisfecho con el dispositivo electrónico y la aplicación, tanto por su comodidad, estética y usabilidad.
 
@@ -136,21 +140,32 @@ Prioridad                              & \multicolumn{1}{c|}{Media}             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 % Otra opción para salto de página \newpage
-\section{Instalación / Puesta en marcha}[h!]
+\section{Instalación / Puesta en marcha}
+Como se han creado dos versiones los requisitos de instalación y puesta en marcha serán diferentes.
 
-Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
-xX
+Para la primera versión del prototipo donde se emplea únicamente el sensor SW520D, es necesario tener instalado el software de Arduino IDE\textcolor{red}{Citar la página donde se instala el software}, sin necesidad de instalar cualquier librería adicional.
 
-Explicación de las versiones de arduino y como se usan??
-X
+Mientras que para la segunda versión se ha de tener instalado el software de Arduino IDE\cite{Arduino1,Arduino2}, además de tener instaladas las siguientes librerías:
+% Referencia de las librerías: https://github.com/jrowberg/i2cdevlib/tree/master
+\begin{itemize}
+    \item \textbf{I2Cdev}:
+    \item \textbf{MPU6050}:
+    \item \textbf{Wire}: 
+\end{itemize}
+
+Una vez tenemos instalado el software y las librerías necesarias el siguiente paso será el de montar el prototipo siguiendo los esquemas especificados.
+
+Si se ha montado la primera versión del prototipo se deberá descargar el programa que se encuentra en el repositorio de GitHub bajo el nombre de 'ProgramaV1'. En el caso de haber montado la segunda versión, se deberá descargar el programa del repositorio de GitHub con el nombre de 'ProgramaV2'. Estos programas son los que abriremos y se enviarán al microprocesador Arduino UNO R3, el prototipo montado, que se encontrará conectado con el cable USB al ordenador. Una vez cargados los programas se podrá realizar el control postural, de forma que se consiga una ejecución exitosa.
+
+
 \subsection{Versión 1, empleando el sensor SW520D}
-Como primera versión se ha creado un prototipo empleando arduino y el sensor SW520D.
+Como primera versión se ha creado un prototipo empleando arduino y el sensor SW520D\cite{SW520D_1}.
 
 Se ha incluido un botón de encendido, un led de color azul que indica que el dispositivo se encuentra encendido, un zumbador pasivo que actuará como señal sonora, un motor de vibración que actuará como aviso vibratorio y el sensor de inclinación SW520D.
 
 Cuando el sensor detecta que la persona se ha inclinado, por lo tanto detecta una mala postura y salta una alerta de sonora (melodía modificable empleando el zumbador) y vibratoria (motor de vibración).
 
-Se pueden observar los componenetes y las conexiones realizadas en las siguientes imágenes:
+Se pueden observar los componentes y las conexiones realizadas en las siguientes imágenes:
 
 \begin{figure}[h!]
     \centering
@@ -207,7 +222,7 @@ void loop() {
   if(estado == HIGH){
     // Si el sensor tilt hace contacto, el usuario tiene una mala postura y el dispositivo manda un aviso, musical o de vibracion.
     if (digitalRead(tilt))  {
-      // Vibración intermitente
+      // Vibracion intermitente
       digitalWrite(motor, HIGH); //vibracion
       delay(500);  // delay 0.5 seconds
       //digitalWrite(motor, LOW);  //stop vibrating
@@ -274,11 +289,14 @@ void melodia(){
 
 \end{lstlisting}
 
-Esta versión proporciona un resultado medianamente satisfactorio, porque realiza su función correctamente, pero, puede dar lugar a errores si la persona realiza una inclinación rápida o si el sensor SW520D no está correctamente orientdao. Además esta priemra versión será muy sensible a vibraciones debido a las propias características del sensor empleado.
+Durante el desarrollo de esta primera versión del proyecto donde se empleaba el sensor SW520D, el más sencillo, se observó que sí que es capaz de realizar un control postural, pero no se trata de un dispositivo de gran precisión, ya es muy sensible a vibraciones.
+
+Aunque este sensor no cumple con el requisito de la precisión esta primera versión ha permitido analizar las posibilidades de mejora y las ventajas que supone trabajar con un sensor de mayor precisión que se emplea en la fase 2.
+
 
 \subsection{Versión 2, empleando el sensor MPU-6050}
 
-La segunda versiñon se ha creado  en base al microprocesador arduino y el módulo MPU6050.
+La segunda versión se ha creado  en base al microprocesador arduino y el módulo MPU6050\cite{MPU6050_1,MPU6050_2}.
 
 Esta segunda versión mantiene el botón de encendido, el led de color azul que indica el estado del dispositivo, el zumbador pasivo y el motor de vibración que realizarán el feedback a través de un aviso sonoro o vibratorio.
 
@@ -286,7 +304,7 @@ Además, esta versión cuenta con un botón de calibración para mayor precisió
 
 El sensor detecta que la persona se ha inclinado más de 15º de su posición , se detecta una mala postura y se ofrece el feedback sonoro (melodía modificable empleando el zumbador) y vibratorio (motor de vibración) para que el usuario modifique su postura, una vez la persona recupera su postura normal correcta el dispositivo deja de sonar y vibrar, indicando que se encuentra en una postura correcta. Inicialmente se ha creado un umbral de 15º, pero se trata de un umbral modificable.
 
-Se pueden observar los componenetes y las conexiones realizadas en las siguientes imágenes:
+Se pueden observar los componentes y las conexiones realizadas en las siguientes imágenes:
 
 \begin{figure}[h!]
     \centering
@@ -606,16 +624,51 @@ Esta versión proporciona un resultado satisfactorio, porque realiza su función
 
 Por otro lado, hay que pensar en cómo posicionar de forma correcta el dispositivo con el sensor en la espalda del usuario, ya que el sensor debe estar en horizontal. Si no se coloca correctamente el sensor habría que modificar los ejes en el código, ya que no detectara de forma correcta los ángulos y esto puede ser algo complejo.
 
+\textcolor{red}{IDEAS: una base para la calibración, ya que indicas que debe estar en una superficie plana, igual algun tipo de superficie con indicadoresde nivel}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section{Manuales y/o Demostraciones prácticas}[h!]
+\section{Manuales y/o Demostraciones prácticas}
 
-Introducir XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+\textcolor{red}{si a la vez que preparas la demostración grabas los vídeos y los incluyes puede ser bastante valorado .. además de al tribunal puedes decir que le servirá al usuario para entender como debe realizar las acciones.}
 
-Incluir imágenes de cada paso al utilizar cada una de las versiones.
-
-
+Las demostraciones prácticas se realizarán en base a una serie de pasos que se deberán realizar. Si estos pasos transcurren sin ningún ontratiempo se obtendrá una ejecución exitosa y observarán y analizarán los resultados.
 
 
-    
-     
+\textcolor{red}{Incluir imágenes de cada paso al utilizar cada una de las versiones.}
+
+\textcolor{red}{Se incluirá la dirección a los videos de ejemplo.}
+
+\subsection{Demostración de la primera versión del prototipo}
+
+En primer lugar el usuario se deberá colocar el prototipo, si es necesario puede solicitar ayuda a otra persona.
+
+Una vez se encuentre colocado el dispositivo se encenderá presionando el botón de encendido, tras encender el prototipo se encenderá un led azul. El dispositivo empezará a controlar la postura del usuario.
+
+Para poder comprobar su correcto funcionamiento el usuario se inclinará hacia delante y el dispositivo al detectar un postura incorrecta dará feedback a través de sonido, y en el caso de tener añadido en el dispositivo un motor de vibración, también vibrará. Tras unos segundos el usuario volverá a una posición correcta, al corregir su postura el dispositivo dejará de sonar y de vibrar.
+
+Se volverá a comprobar que funciona correctamente haciendo que el usuario se vuelva a inclinar hacia delante, el dispositivo volverá a indicar que se ha establecido una mala postura y el usuario gracias al aviso sabrá que deberá corregir su postura, una vez el usuario haya corregido su postura el dispositivo dejará de pitar.
+
+Se realizarán pruebas en las que el usuario se agache o salte o ande para ver cuando da problemas este dispositivo, debido a su sensibilidad a vibraciones. Los problemas detectados son aquellos que se intentarán solucionar en la segunda version donde se empleará un sensor más complejo.
+
+Por último, el dispositivo se apagará empleando el botón de encendido/ apagado.
+
+
+\subsection{Demostración de la primera versión del prototipo}
+
+Para la demostración de esta segunda versión en la que se emplea un sensor más complejo y preciso, el sensor MPU6050, el primer paso es que el usuario se coloque el prototipo.
+
+Una vez el dispositivo se encuentre correctamente colocado el sistema pedirá el ángulo de aviso y el tiempo de aviso, si el usuario no indica se toma como valor por defecto 15º y 5 segundos. Se debe encender el dispositivo presionando el botón de encendido. Al encender el prototipo se encenderá un led de color azul y el dispositivo comenzará a controlar la postura. Si es la primera vez que se conecta al portatil el dispositivo pitará por falta de calibración. En ese momento el usuario deberá presionar el botón de calibración para calibrar el dispositivo. Durante la calibración el dispositivo no debe moverse y puede tardar varios minutos una vez calibrado, el dispositivo pitará 3 veces o vibrará tres veces.
+
+Tras la calibración el prototipo comenzará el control postural de forma correcta.
+
+Para comprobar su funcionamiento la persona se inclinará ligeramente hacia delante, si supera el umbral, en este caso 15º, el dispositivo pitará y vibrará a modo de feedback. La persona gracias al biofeedback corregirá su postura, una vez adoptada una postura correcta el dispositivo dejará de emitir sonido y vibración. Se volverá a realizar una medición de prueba pero está vez el usuario se encontrará andando.
+
+El usuario se inclinará de nuevo ligeramente y el dispositivo indicará una mala postura, la persona corregirá su postura tras conocer su estado gracias al dispositivo, y una vez corregida la postura el dispositivo dejará de emitir la alerta.
+
+Se puede probar la mayor precisión de esta versión realizando los movimientos que perturbaban en la versión anterior, como agacharse o saltar donde el sensor deberá no deberá emitir alerta.
+
+Queda comprobado que con esta versión se obtiene un dispositivo más preciso y personalizado y, además, se puede emplear tanto para uso en personas sentadas o en movimiento (andando).
+
+Por último, se deberá apagar el dispositivo con el botón de encendido/apagado una vez ya no se requiera el control postural.
+

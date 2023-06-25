@@ -1,7 +1,5 @@
 \apendice{Especificación de Requisitos}
 
-Si procede.
-
 
 \section{Diagrama de casos de uso}
 
@@ -15,11 +13,6 @@ Si procede.
 
 \section{Explicación casos de uso.}
 
-
-
-Se puede describir mediante el uso de tablas o mediante lenguaje natural.   
-
-Una muestra de cómo podría ser una tabla de casos de uso:
 
 \begin{comment}
 % Caso de Uso 1 -> Consultar Experimentos.
@@ -387,7 +380,7 @@ Una muestra de cómo podría ser una tabla de casos de uso:
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se archivan los datos recopilados a través del dispositivo. Los datos se van guardando en tiempo real si el dispositivo se encuentra conectado a la aplicación.}\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se archivan los datos recopilados a través del dispositivo. Los datos se van guardando en tiempo real si el dispositivo se encuentra conectado a la aplicación.\textcolor{red}{ dices que 'puede ser en tiempo real' deberá de explicar en que casos no es en tiempo real, o que pasa con el almacenamiento.}}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
         \begin{enumerate}
@@ -413,6 +406,7 @@ Una muestra de cómo podría ser una tabla de casos de uso:
 \end{table}
 
 % ----------------------------------------------------
+
 % Caso de uso 09
 \begin{table}[h!]
 \centering
@@ -425,7 +419,7 @@ Una muestra de cómo podría ser una tabla de casos de uso:
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {A partir de los datos recopilados del sensor, se realiza un informe que puede ser en tiempo real que incluye toda la información relevante y estadísticas calculadas en función de los datos. }\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {A partir de los datos recopilados del sensor, se realiza un informe que puede ser en tiempo real que incluye toda la información relevante y estadísticas calculadas en función de los datos. \textcolor{red}{CS-09 dices que 'puede ser en tiempo real' deberá de explicar en que casos no es en tiempo real, o que pasa con el almacenamiento.} }\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
         \begin{enumerate}
@@ -434,7 +428,7 @@ Una muestra de cómo podría ser una tabla de casos de uso:
 			\item El caso de uso comienza tras el CS-08.
 			\item El sistema incluye los datos obtenidos. 
                 \item El sistema crea varias estadísticas utilizando gráficas que resumen visualmente los datos recogidos y la evolución del paciente.
-                \item Se puede obtener un informe en formato pdf. 
+                \item Se puede obtener un informe en formato pdf.\textcolor{red}{Incluir donde secrea, como se crea..} 
 		\end{enumerate}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Frecuencia}                & Alta\\
@@ -464,7 +458,8 @@ Una muestra de cómo podría ser una tabla de casos de uso:
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se realizan distintos juegos o ejercicios incluidos en la aplicación software, que, mediante la interacción con el dispositivo hardware, permitirán al usuario aumentar y mejorar la musculatura que se necesita para una buena postura. }\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se realizan distintos juegos o ejercicios incluidos en la aplicación software, que, mediante la interacción con el dispositivo hardware, permitirán al usuario aumentar y mejorar la musculatura que se necesita para una buena postura. \textcolor{red}{en " realizan distintos juegos o ejercicios incluidos en la aplicación
+software" yo subdibidiría en 1. y 2. con una breve descripción por lo menos de los mas relevantes. auqneu puedes indicar que hay más si no describes todos.}}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
         \begin{enumerate}
