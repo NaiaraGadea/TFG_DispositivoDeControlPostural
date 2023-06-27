@@ -6,27 +6,23 @@ Breve descripción de los datos.
 En caso de tratarse de un trabajo donde los datos son muy importantes, puede haber explicaciones extra en el anexo correspondiente. yo creo que aquí puedes describir los datos que vas a recoger, sean muchos o pocos. Date cuenta que pocos datos pero de muchísimas personas si son ya una entidad de estudio. 
 Pero creo que si es necesario indicar el tipo de datos y su magnitud. Para mostrarlo desde el principio. Puedes también hacer referencia a las unidades de ángulos de rotación o inclinación, aceleraciones en un punto determinado y movimientos }
 
-\textcolor{red}{En este trabajo no se utilizan tablas de datos.}
+Para la elaboración del proyecto no se han empleado datos predefinidos, se han utilizado datos de elaboración propia. Se pueden distinguir entre datos proporcionados por los usuarios y datos proporcionados por el dispositivo.
 
-\textcolor{red}{Nose...}
-\textcolor{red}{El dispositivo ideado trabajará con los datos que se obtienen de la monitorización de la postura del usuario, ya se encuentre sentado o de pie, alertando en caso de detección de una postura dañina durante un periodo de tiempo determinado. De esta forma se logrará que se desarrolle una postura natural correcta y, por lo tanto saludable. }
+Por un lado, existen los datos que hayan sido proporcionados por el usuario, al crear su cuenta en la aplicación del dispositivo. Estos datos son datos personales, como su nombre, apellidos, nombre de usuario, correo electrónico, edad o contraseña. Estos datos deberán ser debidamente protegidos según las leyes españolas relativas (Ver anexo A).
 
-\textcolor{red}{La postura correcta prevendrá de posibles lesiones, u otros daños y el desarrollo correcto de las actividades.}
+Por otro lado, tenemos aquellos datos que se recopilan cada vez que se realiza la monitorización de la postura del usuario, ya se encuentre la persona sentada o de pie. Se realizan mediciones cada medio segundo a través del dispositivo. En cada medición se obtendrán en los 3 ejes (ejes \textit{x},\textit{y} y \textit{z}) aceleraciones en $m/s^{2}$, rotaciones en $deg/s$ y ángulos de inclinación en $deg$. Los ángulos de inclinación se han obtenido a partir de la triangulación de las aceleraciones y son los que se han empleado principalmente en el prototipo para la diferenciación entre una buena y una mala postura en base a un umbral establecido. 
 
-\textcolor{red}{Se trabajarán con los ángulos de rotación o inclinación, aceleraciones en un punto determinado y movimientos que realiza una persona al modificar su postura. Para detectar una correcta o incorrecta postura se establecerá un umbral donde se considerará que la persona está en una buena postura, por lo que, fuera de ese umbral, la persona tendrá una mala postura y el dispositivo emitirá un aviso para que la persona modifique su postura.}
+Si se detecta una postura perjudicial, porque se ha superado el ángulo umbral durante un tiempo determinado se realizará una señal de biofeedback para que el usuario recupere una postura correcta y de esta forma se logrará que se desarrolle la postura natural correcta y saludable. Una postura correcta prevendrá al usuario de posibles lesiones y permitirá un mejor desarrollo de algunas actividades.
+
+En el futuro, la recopilación de estos datos de muchas personas puede permitir realizar estudios estadísticos acerca de la postura en distintas condiciones, como la postura en función de la edad, sexo o actividad.
+
  
 \section{Técnicas y herramientas.}
 
-\textcolor{red}{recuerda indicar para que usas cada una de ellas y porque esa Y no otras (si puede ser)}
-
 \textcolor{red}{Esta parte de la memoria tiene como objetivo presentar las técnicas metodológicas y las herramientas de desarrollo que se han utilizado para llevar a cabo el proyecto. Si se han estudiado diferentes alternativas de metodologías, herramientas, bibliotecas se puede hacer un resumen de los aspectos más destacados de cada alternativa, incluyendo comparativas entre las distintas opciones y una justificación de las elecciones realizadas. }
 
-\textcolor{red}{No se pretende que este apartado se convierta en un capítulo de un libro dedicado a cada una de las alternativas, sino comentar los aspectos más destacados de cada opción, con un repaso somero a los fundamentos esenciales y referencias bibliográficas para que el lector pueda ampliar su conocimiento sobre el tema.}
-
-\textcolor{red}{Añadir los posibles sensores, el cable USB, microcontrolador (En mi caso arduino (hardware y software en C++ simplificado)). Las aplicaciones que se han usado para la realización del proyecto... Se deberá explicar porque se han usado unos sensores u otros (si se hace una tabla comparativa mejor). }
-
 \subsection{Aplicaciones empleadas.}
-
+Para el desarrollo del proyecto se han empleado una serie de apliaciones gratuitas que hemos podido conocer y utilizar a lo largo de la duración del grado. 
 \begin{itemize}
 \item \textbf{Overleaf}\cite{Overleaf}: es un editor LaTeX colaborativo en línea, que se emplea para la creación, edición y publicación de documentos científicos. LaTeX es una herramienta que a partir del procesamiento de un documento de texto plano compuesto por texto y comandos LaTeX por el software de TeX engine convierte los comandos LaTeX y el texto del documento en un archivo PDF profesional. Esta es la herramienta que se ha empleado para la realización de este documento. Se puede acceder a través de https://www.overleaf.com  %(Referencia: https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX )
 
@@ -36,7 +32,7 @@ Pero creo que si es necesario indicar el tipo de datos y su magnitud. Para mostr
 
 \item \textbf{Arduino}\cite{Arduino1, Arduino2}: plataforma de código abierto de electrónica basada en hardware y software simple y accesible, originalmente creada para la creación rápida de prototipos. Existen diferentes placas de Arduino con distintas funciones. Se puede introducir en el microcontrolador un conjunto de instrucciones que se quiere que realice el dispositivo mediante el uso del software de Arduino (IDE), estas instrucciones están escritas en el lenguaje de programación Arduino, que es similar a C++ pero simplificado, además se puede expandir el lenguaje utilizando distintas bibliotecas C++. Esta plataforma es muy utilizada y ha permitido crear gran variedad de proyectos. Su sencillez, accesibilidad y coste son las principales razones por las que se ha pensado en realizar el prototipo de este proyecto basado en esta plataforma. 
 
-\item \textbf{GitHub}\cite{GitHub}: plataforma gratuita en línea de código abierto cuyo objetivo principal es el desarrollo colaborativo de software, para ello se basa en su sistema de control de versiones. GitHub fue construida empleando herramientas de código abierto cómo  Ruby on Rails, Go, Primer, React o Kafka. Además, esta plataforma permite no solo la creación de proyectos públicos sino que también proyectos privados, que se guardan en la nube. Por otro lado, GitHub también tiene distintas herramientas que mejoran y dinamizan el desarrollo de los proyectos.
+\item \textbf{GitHub}\cite{GitHub}: plataforma gratuita en línea de código abierto cuyo objetivo principal es el desarrollo colaborativo de software, para ello se basa en su sistema de control de versiones. GitHub fue construida empleando herramientas de código abierto cómo  Ruby on Rails, Go, Primer, React o Kafka. Además, esta plataforma permite no solo la creación de proyectos públicos sino que también proyectos privados, que se guardan en la nube. Por otro lado, GitHub también tiene distintas herramientas que mejoran y dinamizan el desarrollo de los proyectos. Esta plataforma se ha empleado para llevar el seguimiento del proyecto y recopilar todos los documentos relacionados en un repositorio.
 
 
 \end{itemize}
