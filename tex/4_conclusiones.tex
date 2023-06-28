@@ -1,16 +1,50 @@
 \capitulo{4}{Conclusiones}
+\textcolor{red}{
+\begin{itemize}
+    \item Reafirmar las afirmaciones y los objetivos del trabajo.
+    \item Reiterar los puntos principales y los resultados obtenidos.
+    \item Mencionar las limitaciones y las cuestiones adecuadas para el desarrollo del tema
+    \item Conectar las conclusiones con la introducción y destacar la relevancia del trabajo.
+    \item Proponer trabajos futuros o líneas de investigación relacionadas.
+\end{itemize}
+}
+
+Actualmente vivimos en un mundo heterogéneo y lleno de tecnologías, además, desde pequeños se nos ha dicho que debemos sentarnos correctamente, del daño que puede causar llevar mochilas pesadas y cosas similares 
+
+En este trabajo se ha conseguido un prototipo sencillo que ...
+
+Existen todavía trabajo que hacer para obtener un dispositivo de calidad útil. En conjunto con asociaciones o profesiones que evalúen la utilidad del dispositivo.
+
+
+
+Este trabajo sirve como ejemplo de las posibilidades y la importancia que ofrece una visita a una asociación, como es la Asociacion Parkinson Burgos, dónde se nos ha mostrado el día a día de las personas, de la mano de los profesionales, que indicaron necesidades reales y concretas. 
+
+Sin embargo, al formar parte de la primera promoción del grado, es la primera vez que se realiza un TFG de estas características, por lo que no ha sido posible integrarse en un laboratorio en concreto, se trata de un trabajo de fin de grado muy amplio, y sí que es verdad que tenemos conocimientos generales en practicamente todas las materias, pero existen todavía varios puntos que reforzar. Con todo ello, espero que este trabajo sirva para conocer limitaciones, dificultades y posibles carencias 
+
+
 \textcolor{red}{Todo proyecto debe incluir las conclusiones que se derivan de su desarrollo. Éstas pueden ser de diferente índole, dependiendo de la tipología del proyecto, pero normalmente van a estar presentes un conjunto de conclusiones relacionadas con los resultados del proyecto y un conjunto de conclusiones técnicas. }
 
 \textcolor{red}{Creo que en conclusiones tienes que indicar que al ser la primera vez que se realiza un TFG de estas características también sirve para ver las limitaciones, dificultades y carencias con las uqe un alumno puede enfrentarse al tratar de realizar este tipo de proyectos sin integrarse en un laboratorio en concreto. }
 
-\textcolor{red}{Destacaría la importancia de que es el punto de partida para conseguir colaborar con asociaciones como Parkinson a partir de necesidades reales y concretas mostradas por sus usuarios.}
 
 \section{Resumen de resultados.}
 
 \textcolor{red}{Breve resumen de los resultados. En caso de ser un trabajo muy experimental, los resultados completos pueden aparecer en su anexo correspondiente.}
 
+Como resultado del estudio de los diferentes productos destinados al control postural en se ha intentado unir la mayor cantidad de características para obtener un dispositivo sencillo y de bajo coste.
+
+Como consecuencia se ha realizado una primera versión del prototipo donde se empleaba un sensor más sencillo, el sensor SW520D, con el que se conseguía cumplir la función objetivo pero con sensibilidad a vibraciones por lo se decidió probar con un sensor más complejo, el sensor MPU6050, que permitía cumplir con la función de control postural además que garantizaba la obtención de datos que se pueden emplear para la realización de estadísticas.
+
+Además, se ha diseñado un prototipo de interfaz de una aplicación qeu facilite la interacción del usuario con el dispositivo, y que permitiese un mejor monitoreo y conocimiento de la postura del usuario. En el prototipo de interfaz se plantea no solo las modificaciones de los ajustes del dispositivo, si no que también la visualización de estadísticas de la postura del usuario o la realización de juegos o ejercicios que se incluirán en la aplicación, para el desarrollo musculoésquelético de la postura reforzando aquellos músuculos relacionados con la postura y facilitando el aprendizaje muscular de una postura natural correcta, 
+
 \section{Discusión.}
 \textcolor{red}{Discusión y análisis de los resultados obtenidos.}
+
+En la primera fase se obtiene el resultado que se esperaba, cumple con la función de control postural, pero no es muy aceptable frente a a vibraciones y no es capaz de registrar datos ya que este dispositivo únicamente trabaja como un interruptor en función de la inclinación en la que se encuentre el sensor.
+
+Observando y analizando los fallos encontrados se realizó el segundo prototipo, la segunda versión, donde se empleaba el módulo MPU6050, este prototipo ofrece mayor precisión y datos. Aunque aún así según los componentes del sensor no está pensado para uso prologado, ya que produce deriva.
+
+El problema de deriva se puede solucionar con un sensor algo más complejo pero similar al MPU6050, el MPU9259 que incluye un magnetómetro que soluciona este problema. Este último sensor es el que se habría pensado para una tercera versión pero no ha sido posible realizarla por falta de tiempo.
 
 
 \section{Aspectos relevantes.}
@@ -25,8 +59,8 @@ Este apartado pretende recoger los aspectos más interesantes del \textbf{desarr
 
 \textcolor{red}{En este punto se podrían incluir los problemas que han surgido durante el desarrollo del proyecto.}
 
-\textcolor{red}{Se han realizado diferentes versiones del prototipo a modo de kit, una primera versión con un sensor tilt (el sensor SW520D). }
-\textcolor{red}{La segunda versión del prototipo se ha realizado con el módulo MPU6050.}
+\textcolor{red}{Se han realizado diferentes versiones del prototipo a modo de kit, una primera versión con un sensor tilt (el sensor SW520D). Como relevante de esta versión es que es necesario una colocación del sensor en un determinado ángulo para que funcione correctamente, y por lo tanto sería necesario de la creación de una carcasa que guardase el sensor en ese ángulo concreto. }
+\textcolor{red}{La segunda versión del prototipo se ha realizado con el módulo MPU6050. Como aspecto relevante es que se ha creado una base donde colocar el sensor y que sea sencillo de calibrar.}
 
 
 
