@@ -40,36 +40,18 @@ En el repositorio de GitHub encontraremos los siguientes ficheros y directorios:
 \end{itemize}
 
 
-\section{Compilación, instalación y ejecución del proyecto}
-
-\textcolor{red}{En caso de ser necesaria esta sección, porque la compilación o ejecución no sea directa.}
-
-\textcolor{red}{Para utilizar los ficheros de código de arduino se deberá utilizar el Arduino IDE y tener montado el prototipo del dispositivo e introducir en el arduino el código necesario para que el dispositivo funcione.}
-
-\textcolor{red}{YA SE HA EXPLICADO EN EL B2.INSTALACIÓN Y PUESTA EN MARCHA. VER SI MOVER}
-
-\section{Pruebas del sistema}
-\textcolor{red}{Esta sección puede ser opcional.}
-
-\textcolor{red}{Se ha realizado una encuesta de validación por parte del usuario.}
-
-\textcolor{red}{Puede tratarse de validación de la interfaz por parte de los usuarios, mediante escuestas o similar o validación del funcionamiento mediante pruebas unitarias.}
-
-
-
 \section{Instrucciones para la modificación o mejora del proyecto.}
 
-\textcolor{red}{Instrucciones y consejos para que el trabajo pueda ser mejorado en futuras ediciones.}
+Al ser este proyecto un prototipo hay varios aspectos de mejora para el futuro desde añadir componentes al prototipo a crear una carcasa o crear una base de datos donde se guarden los datos adquiridos.
 
-\textcolor{red}{Se puede crear un prototipo más robusto, utilizar un módulo Bluetooth, crear la aplicación del dispositivo para la mejora de la interación del usuario con el dispositivo.}
+Durante el desarrollo de la primera fase se observó que el sensor empleado no era de gran precisión y por ello se decidió crear una segunda versión con un sensor de mayor precisión, el sensor MPU-6050\cite{MPU6050_1,MPU6050_2}, que supusiera una ventaja al proyecto. 
 
-\textcolor{red}{Durante el desarrollo de la primera versión del proyecto con el sensor más sencillo, el sensor SW250D, se observó que no tiene una gran precisión para esta aplicación, además es necesario crear una carcasa donde colocar el sensor de una determinada forma para que cumpla de manera correcta su función.}
+La segunda versión tiene la necesidad de realizar una calibración cada vez que se conecta el prototipo al portátil que tiene instalado el software de Arduino IDE\cite{ArduinoIDE}, como primera propuesta de mejora se podría modificar el código del programa para que no fuese necesario calibrar el dispositivo con tanta frecuencia y para que no fuese necesario presionar un el botón de calibración siempre.
 
+El sensor resultó exitoso, sin embargo, por las características del sensor MPU6050 este prototipo no puede ser utilizado durante largos periodos de tiempo ya que se crea deriva y se distorsionan las mediciones. Por ello, como propuesta de mejora se podrían estudiar el uso de otros sensores similares que resolviesen este problema uno de los sensores que se podrían emplear sería el MPU9250\cite{MPU9250_1,MPU9250_2}.
 
-\textcolor{red}{Mejora haciendo que la versión 2 del prototipo con el módulo MPU6050 se calibre automáticamente, sin tener que clicar ningun boton.}
+Además, para el prototipo se podría crear una placa electrónica donde se encuentren todos los componentes del prototipo sin la necesidad de emplear una placa de pruebas. Asimismo, se podría crear una carcasa, por ejemplo, empleando impresión 3D que protegiese el hardware y que se adaptase de manera ergonómica al cuerpo de la persona.
 
-\textcolor{red}{Realizar un prototipo con el modulo MPU9250 o similar porque sera similar que el MPU6050 pero más preciso y sin problemas de deriva durante el uso continuado.}
+Al prototipo se podrían incluir otros elementos como pueden ser una batería y un módulo Bluetooth para mejorar la interacción con el usuario, eliminando cables que pueden ser incómodos para el usuario además que pueden limitar la libertad de los movimientos. Disponer de un módulo Bluetooth también permitiría transmitir los datos que recoge el sensor sin necesidad de conexión USB. 
 
-Este proyecto es básicamente un prototipo, por lo que hay bastantes aspectos en los que mejorar en el futuro.
-
-Durante el desarrollo y las pruebas de la primera fase, dónde se empleaba el sensor SW520D, se pudo observar que, aunque no se trata de un sensor de gran precisión se pudieron analizar las posibilidades de mejora y las ventajas que suponía trabajar con el sensor de mayor precisión en la fase 2.
+Este último punto nos lleva a otro punto a mejorar, el almacenamiento y tratamiento de los datos. Se puede implementar una forma de almacenaje de los datos para que se pueda trabajar con ellos obteniendo distintas estadísticas que serían útiles en el futuro. Y que se realice un trabajo estadístico de esos mismos datos para conecer más información a parte de la corrección en tiempo real de la postura.

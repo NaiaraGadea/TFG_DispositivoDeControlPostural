@@ -9,26 +9,57 @@ Para el correcto desarrollo del proyecto se seguirá una planificacion temporal 
     \centering
     \includegraphics[width=1\textwidth]{img/PlanificacionTemporal.png}
     \caption{Planificación temporal seguida para la realización de este proyecto.}
-    \label{fig:planTemporal} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \label{fig:planTemporal} 
 \end{figure}
-% Añadir una imagen con los hitos por semanas unas 14 semanas aprox aunque puede variar en funcion se vaya avanzando, en cuyo caso se volverá a modificar la tabla
 
 En la planificación temporal se puede ver cada apartado de la memoria y los anexos desarrollados a lo largo de las semanas. 
 
 \section{Planificación económica}
-\textcolor{red}{falta incluir tiempo de desarrollo del ingeniero. SIEMPRE, porque sino estás diciendo que tu trabajo NO VALE NADA ...}
 
-\textcolor{red}{también se incluyen los equipos  de desarrollo amortizados en 4 años, pero solo aplicando el tiempo de uso para el proyecto, es decir si son 4 o 6 meses esa parte proporcional de la amortización}
+Para obtener una buena planificación económica se deberán identificar los costes tanto personales como materiales y de desarrollo y los ingresos relacionados con el prototipo.
 
-\textcolor{red}{quizás te pueden decir que los degloses mejor en tablas... pero no es importante.}
+Los costes personales se calcularán en función del salario medio de un Ingeniero de la Salud durante un periodo aproximado de 6 meses durante media jornada\footnote{La media jornada constará de unas 4 horas al día durante 5 días a la semana, es decir, 20 horas semanales.}, lo que suma unas 540 horas de trabajo totales. Teniendo en cuenta que el sueldo neto medio de un ingeniero con menos de 3 años de experiencia ronda los 1392,8€ al mes a jornada completa \cite{SueldoBruto}, a media jornada cobrará unos 696,4€ al mes. Por lo tanto, los costes de personal se podrían resumir en la siguiente tabla.
 
-\textcolor{red}{y en los precios siempre hay que decir si con impuestos o sin impuestos. Tambíén te preguntarán por el proveedor...}
+% ----------------------------------------------------
+% Tabla del desglose económico de costes personales.
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |m{5cm} m{3cm}|  } 
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{} & \cellcolor[HTML]{EFEFEF}\textbf{Costes}\\
 
-\textcolor{red}{en algunos casos en los costes se incluye el reciclado, aunque al no ser una producción industrial yo indicaria que se considera PROTOTIPO o PRE.serie pero nunca producción donde si hay que contemplarlo por legislación, creo.}
+Sueldo neto mensual           & {696,4€} \\
 
-Para obtener una buena planificación económica se deberán identificar los gastos y los ingresos relacionados con el desarrollo del producto.
+Sueldo bruto mensual                & {799,79€}\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Total en los 6 meses}                & \cellcolor[HTML]{EFEFEF}{4798,74€} \\
+\hline
+\end{tabular}
+\caption{Resumen de costes personales.}
+\end{table}
 
-Como primeros gastos incluiremos el precio de los componentes y los gastos de producción, mientras que para obtener los ingresos se tendrá en cuenta el beneficio, gastos imprevistos e I+D del producto, para posibles mejoras en e futuro. La suma de gastos e ingresos nos devolverá el precio final del dispositivo.
+Como primeros gastos relacionados con los equipos de desarrollo, el ordenador que se ha empleado y la licencia de Office que se ha empleado para la realización de algunas partes del proyecto, con una amortización\footnote{La amortización se calcula con la diferencia del coste del equipo y del coste residual a los 4 años (un 40\% del coste del equipo) todo ello divido entre el periodo de amortización, que en este caso serán unos 4 años.} \cite{amortizacion} en unos 4 años. No se incluyen gastos de otros softwares, porque se han empleado herramientas de código abierto y gratuitas.
+
+% ----------------------------------------------------
+% Tabla del desglose económico de equipos de desarrollo.
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |m{5cm} m{3cm} m{3cm}|  } 
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{} & \cellcolor[HTML]{EFEFEF}\textbf{Costes}& \cellcolor[HTML]{EFEFEF}\textbf{Amortización}\\
+
+Ordenador ASUS           & {700€} & {105€}\\
+
+Office 365 personal anual              & {69€} & {10,35€}\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Total en los 6 meses}                & \cellcolor[HTML]{EFEFEF}{769€} & \cellcolor[HTML]{EFEFEF}{115,35€} \\
+\hline
+\end{tabular}
+\caption{Resumen de costes de equipos de desarrollo amortizados en 4 años.}
+\end{table}
+
+
+Para el cálculo del gasto de los materiales del desarrollo del prototipo, se tienen en cuenta los costes de los componentes y los gastos de realización del prototipo, mientras que para obtener los posibles ingresos se tendrá en cuenta el beneficio, gastos imprevistos e I+D del producto, para posibles mejoras en e futuro. La suma de gastos e ingresos nos devolverá el precio final aproximado del dispositivo. No se incluyen los gastos personales, ni de equipos, estos gastos se incluirían en caso de producción del dispositivo final.
 
 
 % ----------------------------------------------------
@@ -54,14 +85,14 @@ Como primeros gastos incluiremos el precio de los componentes y los gastos de pr
 \caption{Resumen de gastos y precio total del producto}
 \end{table}
 
-El prototipo de la versión 1, en la que se emplea el sensor SW520D, tiene un coste final aproximado\footnote{La planificación económica será variable en el tiempo y durante el desarrollo del producto, por lo que se trata de precios totales aproximados. Igual para el prototipo versión 2.} de unos 34.15€, precio que podría ser menor al crear nuestro propio microcontrolador o utilizar una alternativa similar a arduino, puesto que es el elemento que más aumenta el precio de la solución, siendo el precio del resto de los componentes aproximadamente unos 3€.
+El prototipo de la versión 1, en la que se emplea el sensor SW520D\cite{SW520D_1}, tiene un coste final aproximado\footnote{La planificación económica será variable en el tiempo y durante el desarrollo del producto, por lo que se trata de precios totales aproximados. Igual para el prototipo versión 2.} de unos 34.15€, precio que podría ser menor al crear nuestro propio microcontrolador o utilizar una alternativa similar a arduino, puesto que es el elemento que más aumenta el precio de la solución, siendo el precio del resto de los componentes aproximadamente unos 3€.
 
-El prototipo de la versión 2, en la que se emplea el módulo MPU6050, tiene un coste final aproximado de unos 41.10€, precio que también podría disminuir al crear nuestro propio microcontrolador o utilizar una alternativa a arduino, ya que sin el microcontrolador Arduino el precio ronda los 8.5€.
+Por el contrario el prototipo de la versión 2, en el que se emplea el módulo MPU-6050\cite{MPU6050_1,MPU6050_2}, tiene un coste final aproximado de unos 41.10€, precio que también podría disminuir al crear nuestro propio microcontrolador o utilizar una alternativa a arduino, ya que sin el microcontrolador Arduino el precio ronda los 8.5€.
 
 
 \subsection{Desglose de los precios de los componentes del prototipo Versión 1}
 
-Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
+Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario. Estos precios incluyen el porcentaje de IVA y se han calculado en base a los precios del proveedor Amazon España\cite{amazon}.
 \begin{itemize}
     \item Arduino UNO R3: 24€
     \item Resitencias (330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.05€
@@ -76,8 +107,7 @@ Se han tenido en cuenta los precios más bajos encontrados de cada componente ne
 \end{itemize}
 
 \subsection{Desglose de los precios de los componentes del prototipo Versión 2}
-
-Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario.
+Se han tenido en cuenta los precios más bajos encontrados de cada componente necesario. Estos precios incluyen el porcentaje de IVA y se han calculado en base a los precios del proveedor Amazon España\cite{amazon}.
 \begin{itemize}
     \item Arduino UNO R3: 24€
     \item Resitencias (2x330 \textOmega, 2x220 \textOmega, 33 \textOmega, 1000 \textOmega): 0.06€
@@ -92,14 +122,7 @@ Se han tenido en cuenta los precios más bajos encontrados de cada componente ne
 \end{itemize}
 
 
-
-
 \section{Viabilidad legal}
-\begin{comment}
-Respecto a la viabilidad legal es respecto a que partes del desarrollo o comercialización  pueden pararse por problemas legales.
-
-Datos almacenados de los usuarios.
-\end{comment}
 
 Se debe tener en cuenta en todo momento que el dispositivo sea completamente seguro y no afecte negativamente al usuario. Para ello, existen legislaciones específicas a cada fase del desarrollo y comercialización del producto que se deben cumplir para obtener un dispositivo seguro y regulado.
 
@@ -107,7 +130,7 @@ Se pueden diferenciar 3 fases, una primera fase de creación de la idea, diseño
 
 Durante la primera fase de creación de la idea, diseño y desarrollo del producto y realización de pruebas, todos los movimientos que se realicen se deberán ajustar a las siguientes legislaciones:
 \begin{itemize}
-    \item Ley 24/2015\cite{patentes}, Ley de Patentes, donde se regula todo lo relacionado con la protección de invenciones empleando patentes, desde el registro de las patentes, invenciones patentables, el derecho a la patente y los procedimientos para pedir una patente.
+    \item Ley 24/2015\cite{patentes}, Ley de Patentes, dónde se regula todo lo relacionado con la protección de invenciones empleando patentes, desde el registro de las patentes, invenciones patentables, el derecho a la patente y los procedimientos para pedir una patente.
     % Referencia: 
     % https://www.boe.es/buscar/act.php?id=BOE-A-2015-8328
     
@@ -155,7 +178,6 @@ Por último, si el dispositivo se ha puesto a la venta se debe pensar en los req
     % Referencia:
     % https://eur-lex.europa.eu/ES/legal-content/summary/general-data-protection-regulation-gdpr.html
 \end{itemize}
-
 
 Además el dispositivo deberá contar con un certificado CE\cite{certificadoEuropeo}, que garantizará que el dispositivo cumple con los requisitos de seguridad, protección y sanidad europeos. Una vez se obtenga el certificado el dispositivo podrá ser comercializado legalmente en la Unión Europea.
 % Referencia:

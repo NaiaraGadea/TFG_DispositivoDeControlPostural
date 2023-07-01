@@ -1,13 +1,33 @@
 \apendice{Descripción de adquisición y tratamiento de datos}
 
-Va fuera creo simplemente con la información del punto de descripcion de los datos de la memoria será suficiente.
+Como se ha mencionado en la memoria en este proyecto se han empleado \textbf{datos de elaboración propia}, no se han obtenido datos externos de bases de datos existentes. 
 
-\textcolor{red}{cuando hables de los datos, como los habrás generado y recogido tu habla de ELABORACiÖN PROPIA.}
+Por un lado se trabaja con los datos personales proporcionados por el usuario:
+\begin{itemize}
+    \item Nombre
+    \item Apellidos
+    \item Edad
+    \item Correo electrónico
+    \item Nombre de usuario
+    \item Constraseña
+\end{itemize}
 
-\section{Descripción formal de los datos}
+Por el otro lado, en la segunda versión del prototipo también se trabaja con los datos recopilados por el dispositivo. Se realiza una medición cada 0,5 segundos\footnote{En el futuro se puede modificar y se puede trabajar con medidas medias cada cierto tiempo.} y en cada medición se obtienen los siguientes datos:
+\begin{itemize}
+    \item Aceleración eje X en $m/s^{2}$.
+    \item Aceleración eje Y en $m/s^{2}$.
+    \item Aceleración eje Z\footnote{esta aceleración deberá aproximarse a la gravedad de la tierra, a 9.81 $m/s^{2}$} en $m/s^{2}$.
+    \item Inclinación eje X en $deg$.
+    \item Inclinación eje Y en $deg$.
+    \item Rotación eje X en $deg/s$.
+    \item Rotación eje Y en $deg/s$.
+    \item Rotación eje Z en $deg/s$.
+\end{itemize}
 
-Tablas, imágenes, señales, secuencias de ADN…
-    
-\section{Descripción clínica de los datos.}
+Las inclinaciones son las que se emplean en el segundo prototipo para diferenciar entre una postura correcta o incorrecta.
 
-Descripción y explicaciones clinicas del significado o interpretación de los datos.
+La acumulación de estos datos en bases de datos abrirá el camino a la realización de estadísticas que aporten más información al usuario sobre el estado de su postura y su evolución al emplear el dispositivo.
+
+Todos estos datos deberán ser protegidos conforme a la legislación español definida en el \textit{Anexo A}.
+
+De igual modo, en el futuro, se pueden acumular datos de gran cantidad de personas y de esta forma también se podrían realizar estudios estadísticos con diferentes cohortes para obtener más información sobre la postura y el control postural.
