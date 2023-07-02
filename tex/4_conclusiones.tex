@@ -13,25 +13,52 @@ Como complemento del proyecto se ha ideado un prototipo de interfaz en el que se
 
 Como se ha mencionado previamente, se han creado dos protipos de un dispositivo de control postural. La primera versión del prototipo es la más sencilla, se ha empleado un sensor de inclinación SW520D que actúa como un interruptor. Mientras la persona se encuentre en una buena postura se considerará como apagado y cuando la persona se inclina hacia delante el dispositivo alertará a modo de biofeedback sonoro o vibratorio para que la persona recupere su postura correcta. 
 
-Adicionalmente el primer prototipo incluye un botón de encendido, un led que indica que el dispositivo se encuentra encendido, un zumbador pasivo que emitirá la señal sonora para avisar al usuario y un motor de vibración que emitirá una señal vibratoria. Aunque este último componente no se ha podido conseguir para la demostración.
+Adicionalmente el primer prototipo incluye un botón de encendido, un led que indica que el dispositivo se encuentra encendido, un zumbador pasivo que emitirá la señal sonora para avisar al usuario y un motor de vibración que emitirá una señal vibratoria. Aunque, este último componente no se ha podido conseguir para la demostración. Se pueden ver imágenes del primer prototipo en las figuras \textit{Figura \ref{fig:imgDispositivo_V1}} y \textit{Figura \ref{fig:imgDispositivo_V1_sensor}}.
 
-\textcolor{red}{Añadir imagen del prototipo1 real}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/Disp_V1_1.jpg}
+    \includegraphics[width=0.5\textwidth]{img/Disp_V1_2.jpg}
+    \caption{Imágenes del primer prototipo. Fuente Propia.}
+    \label{fig:imgDispositivo_V1} 
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/SensorV1_1.jpg}
+    \includegraphics[width=0.4\textwidth]{img/SensorV1_2.jpg}
+    \caption{Imágenes del sensor y su base  primer prototipo. Fuente Propia.}
+    \label{fig:imgDispositivo_V1_sensor} 
+\end{figure}
 
 El sensor empleado en la primera versión es muy sensible a vibraciones y por ello se estudiaron otras posibilidades y se realizó un segundo prototipo.
 
-La segunda versión consta de los mismos componentes que la primera versión integrando un botón de calibración y modificando el sensor SW520D\cite{SW520D_1} a un sensor más complejo, el MPU-6050\cite{MPU6050_1,MPU6050_2}, que permite una solución más precisa y amplia, midiendo aceleraciones y rotaciones en los ejes \textit{x},\textit{y} y \textit{z}. El hecho de medir las aceleraciones nos permite calcular por triangulación los ángulos de inclinación, estos ángulos de inclinación son los que han sido empleados para diferenciar entre una buena o una mala postura, si se supera el ángulo umbral se considerará como un postura incorrecta y si se mantiene dentro del umbral se considerará una postura correcta, al igual que en la primera fase si se detecta una mala postura se avisará al usuario mediante biofeedback sonoro o vibratorio. De igual modo, este sensor permitía no solo cumplir con la función de control postural sino que garantizaba la obtención de datos que se pueden emplear para la realización de estadísticas.
+La segunda versión consta de los mismos componentes que la primera versión integrando un botón de calibración y modificando el sensor SW520D\cite{SW520D_1} a un sensor más complejo, el MPU-6050\cite{MPU6050_1,MPU6050_2}, que permite una solución más precisa y amplia, midiendo aceleraciones y rotaciones en los ejes \textit{x},\textit{y} y \textit{z}. El hecho de medir las aceleraciones nos permite calcular por triangulación los ángulos de inclinación, estos ángulos de inclinación son los que han sido empleados para diferenciar entre una buena o una mala postura, si se supera el ángulo umbral se considerará como un postura incorrecta y si se mantiene dentro del umbral se considerará una postura correcta, al igual que en la primera fase si se detecta una mala postura se avisará al usuario mediante biofeedback sonoro o vibratorio. De igual modo, este sensor permitía no solo cumplir con la función de control postural sino que garantizaba la obtención de datos que se pueden emplear para la realización de estadísticas. Se pueden ver imágenes de esta segunda versión del prototipo en las figuras \textit{Figura \ref{fig:imgDispositivo_V2}} y \textit{Figura \ref{fig:imgDispositivo_V2_sensor}}.
 
-\textcolor{red}{Añadir imagen del prototipo2 real}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/Disp_V2_1.jpg}
+    \includegraphics[width=0.4\textwidth]{img/Disp_V2_2.jpg}
+    \includegraphics[width=0.4\textwidth]{img/Disp_V2_3.jpg}
+    \caption{Imágenes de la segunda versión del prototipo. Fuente Propia.}
+    \label{fig:imgDispositivo_V2} 
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{img/SensorV2_1.jpg}
+    \includegraphics[width=0.4\textwidth]{img/SensorV2_2.jpg}
+    \includegraphics[width=0.4\textwidth]{img/SensorV2_3.jpg}
+    \caption{Imágenes del sensor y su base de la segunda versión del prototipo. Fuente Propia.}
+    \label{fig:imgDispositivo_V2_sensor} 
+\end{figure}
 
 Para más información y demostraciones de los prototipos se recomienda consultar los anexos correspondientes. Además, en el anexo A se han analizado los costes y la viabilidad legal del proyecto.
 
-Por otro lado, se ha diseñado un prototipo de interfaz de una aplicación que facilite la interacción del usuario con el dispositivo, y que permite un mejor monitoreo y conocimiento de la postura del usuario. En el prototipo de interfaz se plantea no solo las modificaciones de los ajustes del dispositivo, si no que también la visualización de estadísticas de la postura del usuario y la realización de juegos o ejercicios que se incluirán en la aplicación, para el desarrollo musculoesquelético reforzando aquellos músculos relacionados con la postura y facilitando el aprendizaje muscular de una postura natural correcta.
-
-Se puede conocer más información respecto a este prototipo de interfaz en el Anexo F.
+Por otro lado, se ha diseñado un prototipo de interfaz de una aplicación que facilite la interacción del usuario con el dispositivo, y que permite un mejor monitoreo y conocimiento de la postura del usuario. En el prototipo de interfaz se plantea no solo las modificaciones de los ajustes del dispositivo, si no que también la visualización de estadísticas de la postura del usuario y la realización de juegos o ejercicios que se incluirán en la aplicación, para el desarrollo musculoesquelético reforzando aquellos músculos relacionados con la postura y facilitando el aprendizaje muscular de una postura natural correcta. Se puede conocer más información respecto a este prototipo de interfaz en el \textit{Anexo F}.
 
 
 \section{Discusión.}
-\textcolor{red}{Discusión y análisis de los resultados obtenidos.}
 
 En la primera fase se obtiene el resultado que se esperaba, cumple con la función de control postural, pero no se trata de un sensor muy aceptable frente a vibraciones y no es capaz de registrar datos ya que este dispositivo únicamente trabaja como un interruptor en función de la inclinación en la que se encuentre el sensor, es decir, la persona.
 
@@ -54,7 +81,7 @@ Se pueden destacar varios aspectos relevantes del proyecto unos relativos a la c
 \subsection{Selección del tipo de dispositivo}
 Tras identificar las características básicas de la postura y el control postural, se ha realizado un estudio de los dispositivos de control postural y de diagnóstico de alteraciones de la postura para poder recoger las características principales que se quieren incluir en nuestro dispositivo. 
 
-A partir de las distintas opciones estudiadas en el estado del arte se decidió que el dispositivo objetivo fuese un dispositivo portátil que controlase la postura de una persona según la inclinación de su postura, para ello se iba emplear aprendizaje dinámico basado en biofeedback vibratorio. Este modelo de biofeedback no solo permite controlar la postura sino que también permite la mejora de la misma a largo plazo. Este aprendizaje de biofeedback se basa en que si el dispositivo detecta una mala postura del usuario se envían avisos de vibración o sonoros para que sea accesible a todas las personas ya tengan alguna discapacidad o no. 
+A partir de las distintas opciones estudiadas en el estado del arte, se decidió que el dispositivo objetivo fuese un dispositivo portátil que controlase la postura de una persona según la inclinación de su postura, para ello se iba emplear aprendizaje dinámico basado en biofeedback vibratorio. Este modelo de biofeedback no solo permite controlar la postura sino que también permite la mejora de la misma a largo plazo. Este aprendizaje de biofeedback se basa en que si el dispositivo detecta una mala postura del usuario se envían avisos de vibración o sonoros para que sea accesible a todas las personas ya tengan alguna discapacidad o no. 
 
 Además, se pretende diseñar una aplicación móvil que reúna las características más relevantes de dispositivos existentes y que interaccione con el dispositivo para que el usuario tenga a su disposición los ajustes del dispositivo, sus estadísticas de mejora en su postura, distintos ejercicios que pueda realizar para mejora de su musculatura troncal y por consiguiente su postura.
 
@@ -65,11 +92,11 @@ Una vez clara la idea base del dispositivo que se pretendía crear, se estudiaro
 
 Seguidamente, se estudiaron varios sensores que podrían ser útiles para el control postural y se seleccionó en primera opción el sensor SW520D debido a su sencillez y bajo precio.
 
-El primer prototipo se realizó empleando el sensor SW520D y una vez se obtuvo el prototipo se analizó su funcionamiento. Sin ebargo, para que realizara un correcto control postural era necesario colocar el sensor en un determinado ángulo por lo que sería necesario crear una carcasa donde encaje el sensor en ese ángulo o mantener el dispositivo con algún tipo de control de nivel. Por otro lado, este primer sensor es muy sensible a vibraciones por lo que no es de gran precisión y no proporciona datos exactos, por ello, se decidió seguir con el siguiente prototipo.
+El primer prototipo se realizó empleando el sensor SW520D y una vez se obtuvo el prototipo se analizó su funcionamiento. Sin embargo, para que realizara un correcto control postural era necesario colocar el sensor en un determinado ángulo por lo que sería necesario crear una carcasa donde encaje el sensor en ese ángulo o mantener el dispositivo con algún tipo de control de nivel\footnote{En la figura \ref{fig:imgDispositivo_V1_sensor} se puede ver la carcasa improvisada para realizar el correcto control postural.}. Por otro lado, este primer sensor es muy sensible a vibraciones por lo que no es de gran precisión y no proporciona datos exactos, por ello, se decidió seguir con el siguiente prototipo.
 
 Para el segundo prototipo se decidió emplear el MPU-6050 por su precisión y precio. Este sensor incluye un acelerómetro y un giroscopio que permite conocer en todo momento aceleraciones y rotaciones y, en consecuente, inclinaciones en los distintos ejes. Una vez creado el nuevo prototipo se implementó un programa en el que se incluía el águlo umbral para considerar buena postura y el tiempo de espera para avisar de una postura incorrecta y de esta forma monitorizar la misma. Este prototipo permite recopilar las distintas aceleraciones y rotaciones y por lo tanto estos datos se podrían emplear para realizar distintas estadísticas que se puedan mostrar al usuario.
 
-No obstante, este último prototipo requiere de calibración cada vez que se emplea el dispositivo para poder mantener la buena precisión y, para la calibración el dispositivo no se debe mover y debe estar sobre una superficie plana, por lo que se ha tenido que crear una base de sustentación. Esta base se ha creado con material reciclado de cartón.
+No obstante, este último prototipo requiere de calibración cada vez que se emplea el dispositivo para poder mantener la buena precisión y, para la calibración el dispositivo no se debe mover y debe estar sobre una superficie plana, por lo que se ha tenido que crear una base de sustentación. Esta base se ha creado con material reciclado de cartón\footnote{En la figura \ref{fig:imgDispositivo_V2_sensor} se puede ver la base de sustentación improvisada para realizar el correcto calibrado y, en consecuencia, el correcto control postural.}.
 
 Asimismo, el módulo MPU-6050 tiene un problema de deriva por lo que no es apto para uso prolongado. Para solucionar este problema se puede emplear el módulo MPU-9250 que sería el sensor una nuestra tercera versión, que no se ha podido realizar por falta de tiempo.
 
