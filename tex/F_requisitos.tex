@@ -8,7 +8,7 @@ En la \textit{Figura \ref{fig:Casosuso}} se puede ver el diagrama de casos de us
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{img/DiagramaCasosDeUso.png}
-    \caption{Diagrama de casos de uso}
+    \caption{Diagrama de casos de uso. Fuente propia.}
     \label{fig:Casosuso} 
 \end{figure}
 
@@ -318,7 +318,9 @@ En la \textit{Figura \ref{fig:Casosuso}} se puede ver el diagrama de casos de us
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se archivan los datos recopilados a través del dispositivo. Los datos se van guardando en tiempo real si el dispositivo se encuentra conectado a la aplicación.\textcolor{red}{ dices que 'puede ser en tiempo real' deberá de explicar en que casos no es en tiempo real, o que pasa con el almacenamiento.}}\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se archivan los datos recopilados a través del dispositivo. Los datos se van guardando en la base de datos del dispositivo en tiempo real con cada medición realizada, siempre que el dispositivo se encuentra conectado a la aplicación. 
+
+En los casos en los que el dispositivo no se encuentre conectado pero se tenga un método de almacenamiento (Actualmente no se tiene ningún método de almacenamiento pero es posible que en prototipos posteriores se pueda incluir almacenamiento, por ejemplo, una tarjeta SD al prototipo) los datos se almacenarán en la base de datos a posteriori una vez se conecte con la aplicación.}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
         \begin{enumerate}
@@ -357,7 +359,7 @@ En la \textit{Figura \ref{fig:Casosuso}} se puede ver el diagrama de casos de us
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {A partir de los datos recopilados del sensor, se realiza un informe que puede ser en tiempo real que incluye toda la información relevante y estadísticas calculadas en función de los datos. \textcolor{red}{CS-09 dices que 'puede ser en tiempo real' deberá de explicar en que casos no es en tiempo real, o que pasa con el almacenamiento.} }\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {A partir de los datos recopilados del sensor, se realiza un informe que puede ser en tiempo real que incluye toda la información relevante y estadísticas calculadas en función de los datos. Este informe se realizará en tiempo real si se está empleando el dispositivo a la hora de solicitar el informe, por el contrario si no se está monitorizando la postura el informe se realizará a partir de los datos obtenidos hasta ese momento.}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
         \begin{enumerate}
@@ -366,7 +368,9 @@ En la \textit{Figura \ref{fig:Casosuso}} se puede ver el diagrama de casos de us
 			\item El caso de uso comienza tras el CS-08.
 			\item El sistema incluye los datos obtenidos. 
                 \item El sistema crea varias estadísticas utilizando gráficas que resumen visualmente los datos recogidos y la evolución del paciente.
-                \item Se puede obtener un informe en formato pdf.\textcolor{red}{Incluir donde secrea, como se crea..} 
+                \item El usuario presiona sobre la opción 'generar informe' disponible en las opciones de la aplicación.
+                \item El sistema reune las estadísticas obtenidas hasta ese momento en un único documento que puede ser descargado e imprimible.
+                
 		\end{enumerate}\\
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Frecuencia}                & Alta\\
@@ -396,18 +400,9 @@ En la \textit{Figura \ref{fig:Casosuso}} se puede ver el diagrama de casos de us
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Autor}                & Naiara Gadea Rodíguez Gómez\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se realizan distintos juegos o ejercicios incluidos en la aplicación software, que, mediante la interacción con el dispositivo hardware, permitirán al usuario aumentar y mejorar la musculatura que se necesita para una buena postura. \textcolor{red}{en " realizan distintos juegos o ejercicios incluidos en la aplicación
-software" yo subdibidiría en 1. y 2. con una breve descripción por lo menos de los mas relevantes. auqneu puedes indicar que hay más si no describes todos.}}\\
+\cellcolor[HTML]{EFEFEF}\textbf{Descripción}                & {Se realizan distintos juegos o ejercicios incluidos en la aplicación software que, mediante la interacción con el dispositivo hardware, permitirán al usuario aumentar y mejorar la musculatura que se necesita para una buena postura. Se pretende que los ejercicios y juegos incluidos en la aplicación sean similares a los de aplicaciones como Wii Fit de Nintendo \cite{WiiFit}}\\
 \hline
-\cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &                 
-        \begin{enumerate}
-			\def\labelenumi{\arabic{enumi}.}
-			\tightlist
-			\item El usuario selecciona dentro de la pestaña de juegos y ejercicios, el juego o el ejercicio que desee realizar. 
-			\item El sistema muestra el juego o ejercicio seleccionado. 
-                \item El usuario realiza el juego o ejercicio seleccionado. 
-                \item Una vez finalizado el juego o el ejercicio el sistema vuelve a la pantalla donde se incluyen los ejercicios y juegos disponibles para mejorar la musculatura o la postura. 
-		\end{enumerate}\\
+\cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal}                &        {\textit{Ver Tabla \ref{SecNormalCS10}}}       \\  
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Frecuencia}                & Media\\
 \hline
@@ -419,8 +414,48 @@ software" yo subdibidiría en 1. y 2. con una breve descripción por lo menos de
 \hline
 \cellcolor[HTML]{EFEFEF}\textbf{Casos de uso relacionados}                & {CS-01, CS-04, CS-06, CS-07, CS-09, CS-11}\\
 \hline
+\cellcolor[HTML]{EFEFEF}\textbf{Comentarios}                & {El usuario podrá filtrar entre los distintos juegos y ejercicios disponibles.}\\
+\hline
 \end{tabular}
 \caption{CU-10. Ejercitar la musculatura de la postura.}
+\end{table}
+
+% Secuencias Normales del Caso de uso 10
+\begin{table}[h!]
+\centering
+\begin{tabular}{ |m{4cm}|m{11cm}|  } 
+\hline 
+\cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal Opción 1 \newline(Realización de ejercicios)}                &                 
+        \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El usuario entra en la pestaña de juegos y ejercicios
+                de la aplicación.
+                \item El sistema muestra la lista de juegos y ejercicios disponibles.
+                \item El usuario selecciona el ejercicio que desea realizar.
+                \item El sistema abre el ejercicio seleccionado e indica las intrucciones del mismo. El sistema muestra un botón de empezar.
+                \item El usario presiona sobre empezar y comienza a realizar el ejercicio. Mientras el usuario realiza el ejercicio el sistema lleva la cuenta del tiempo que se realiza el ejercicio y los datos durante la realización del mismo. Además, se muestra un botón de finalizar.
+			\item Cuando el usuario desee puede finalizar el ejercicio        presionando el botón de finalizar. El sistema muestra el          juego o ejercicio seleccionado. 
+                \item Una vez finalizado el ejercicio el sistema vuelve a la pantalla donde se encuentran los ejercicios y juegos disponibles para mejorar la musculatura o la postura. 
+		\end{enumerate}\\
+\hline
+\cellcolor[HTML]{EFEFEF}\textbf{Secuencia \newline Normal Opción 2 \newline(Realización de juegos)}                &                 
+        \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El usuario entra en la pestaña de juegos y ejercicios       de la aplicación.
+                \item El sistema muestra la lista de juegos y ejercicios disponibles.
+                \item El usuario selecciona el juego que desea realizar.
+                \item El sistema abre el juego seleccionado e indica las intrucciones del mismo. El sistema muestra un botón de empezar.
+                \item El usario presiona sobre empezar y comienza a realizar el ejercicio. Mientras el usuario realiza el ejercicio el sistema lleva va monitorizando la postura.
+			\item El juego finaliza cuando se acabe su periodo de juego o cuando el usuario pierda el juego. 
+                \item Una vez finalizado el juego el sistema vuelve a la pantalla donde se encuentran los ejercicios y juegos disponibles para mejorar la musculatura o la postura. 
+		\end{enumerate}\\
+\hline
+
+\end{tabular}
+\caption{Secuencia Normal CS-10}
+\label{SecNormalCS10}
 \end{table}
 
 % ----------------------------------------------------
@@ -467,16 +502,16 @@ software" yo subdibidiría en 1. y 2. con una breve descripción por lo menos de
 
 \section{Prototipos de interfaz o interacción con el proyecto.}
 
-Se ha realizado un prototipo de interfaz de aplicación móvil, en base a las aplicaciones de los dispositivos existentes.
+Se ha ideado un prototipo de interfaz de aplicación móvil, en base a las aplicaciones de los dispositivos existentes, los requisitos definidos para el proyecto y los casos de uso ideados en el apartado anterior.
 
 La interfaz creada consta de 6 pantallas principales:
 \begin{enumerate}
-    \item Pantalla de inicio de sesión.
-    \item Pantalla de inicio con información en tiempo real.
-    \item Pantalla con las estadísticas en forma de gráfica de distintos periodos de tiempo.
-    \item Pantalla con juegos y ejercicios de mejora de la postura.
-    \item Pantalla de ajustes del dispositivo conectado.
-    \item Pantalla del perfil del usuario.
+    \item Pantalla de inicio de sesión cuya estructura se puede ver en la \textit{Figura \ref{fig:inicioSesion}}.
+    \item Pantalla de inicio con información en tiempo real cuya estructura se puede ver en la \textit{Figura \ref{fig:inicio}}.
+    \item Pantalla con las estadísticas en forma de gráfica de distintos periodos de tiempo cuya estructura se puede ver en la \textit{Figura \ref{fig:estadisticas}}.
+    \item Pantalla con juegos y ejercicios de mejora de la postura cuya estructura se puede ver en la \textit{Figura \ref{fig:ejercicios}}.
+    \item Pantalla de ajustes del dispositivo conectado cuya estructura se puede ver en la \textit{Figura \ref{fig:ajustes}}.
+    \item Pantalla del perfil del usuario cuya estructura se puede ver en la \textit{Figura \ref{fig:perfil}}.
 \end{enumerate}
 
 
@@ -485,8 +520,8 @@ La interfaz creada consta de 6 pantallas principales:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.35\textwidth]{img/InicioSesion.png}
-    \caption{Pantalla de inicio de sesión.}
-    \label{fig:inicioSesion} % Esta etiqueta es la que permite que se encuentre referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \caption{Pantalla de inicio de sesión. Fuente propia.}
+    \label{fig:inicioSesion} 
 \end{figure}
 
 % ------------------------------------------
@@ -495,8 +530,8 @@ La interfaz creada consta de 6 pantallas principales:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.33\textwidth]{img/PantallaInicio.png}
-    \caption{Pantalla de inicio con información en tiempo real.}
-    \label{fig:inicio} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \caption{Pantalla de inicio con información en tiempo real. Fuente propia.}
+    \label{fig:inicio} 
 \end{figure}
 
 % ------------------------------------------
@@ -504,9 +539,9 @@ La interfaz creada consta de 6 pantallas principales:
 % Inicio de la figura
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.33\textwidth]{img/Estadisticas.png}
-    \caption{Pantalla con las estadísticas en forma de gráfica de distintos periodos de tiempo.}
-    \label{fig:estadisticas} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \includegraphics[width=0.3\textwidth]{img/Estadisticas.png}
+    \caption{Pantalla con las estadísticas en forma de gráfica de distintos periodos de tiempo. Fuente propia.}
+    \label{fig:estadisticas} 
 \end{figure}
 
 % ------------------------------------------
@@ -515,8 +550,8 @@ La interfaz creada consta de 6 pantallas principales:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.33\textwidth]{img/Ejercicios.png}
-    \caption{Pantalla con juegos y ejercicios de mejora de la postura.}
-    \label{fig:ejercicios} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \caption{Pantalla con juegos y ejercicios de mejora de la postura. Fuente propia.}
+    \label{fig:ejercicios} 
 \end{figure}
 
 % ------------------------------------------
@@ -524,9 +559,9 @@ La interfaz creada consta de 6 pantallas principales:
 % Inicio de la figura
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.33\textwidth]{img/PantallaAjustes.png}
-    \caption{Pantalla de ajustes del dispositivo conectado.}
-    \label{fig:ajustes} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \includegraphics[width=0.3\textwidth]{img/PantallaAjustes.png}
+    \caption{Pantalla de ajustes del dispositivo conectado. Fuente propia.}
+    \label{fig:ajustes} 
 \end{figure}
 
 % ------------------------------------------
@@ -535,6 +570,6 @@ La interfaz creada consta de 6 pantallas principales:
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.33\textwidth]{img/PantallaPerfil.png}
-    \caption{Pantalla del perfil del usuario.}
-    \label{fig:perfil} % Esta etiqueta es la que permite que se encuentr referenciada en el texto (es muy importante que siempre estén referenciadas en el texto)
+    \caption{Pantalla del perfil del usuario. Fuente propia.}
+    \label{fig:perfil} 
 \end{figure}
