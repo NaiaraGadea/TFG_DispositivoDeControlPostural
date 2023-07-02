@@ -8,7 +8,7 @@
 Este repositorio recoge los documentos del Trabajo de Fin de Grado del grado en Ingeniería de la Salud de la [Universidad de Burgos](https://www.ubu.es/). En este repositorio se puede seguir el desarrollo del TFG, cuyo objetivo es el desarrollo de un dispositivo de control postural.
 
 ## **Resumen**
-Este trabajo se centra en la búsqueda de una solución a una necesidad real con el fin de la búsqueda de un dispositivo de control postural para el apoyo de la mejora de la postura en diferentes colectivos. Durante el desarrollo del proyecto se han estudiado los aspectos teóricos de la postura y el control postural. Por otro lado, se ha indagado en las distintas soluciones disponibles en el mercado actual con el fin de predefinir las características básicas que debería tener el dispositivo ideado. 
+Este trabajo se centra en la búsqueda de una solución a una necesidad real con el fin de la creación de un dispositivo de control postural para el apoyo de la mejora de la postura en diferentes colectivos. Durante el desarrollo del proyecto se han estudiado los aspectos teóricos de la postura y el control postural. Por otro lado, se ha indagado en las distintas soluciones disponibles en el mercado actual con el fin de predefinir las características básicas que debería tener el dispositivo ideado. 
 
 Tras la obtención de la idea, se ha realizado una búsqueda de los posibles componentes y se han sopesado los componentes a incluir. Se han creado dos versiones del prototipo. En la primera versión se emplea un sensor de inclinación muy sencillo y en la segunda versión se utiliza un sensor MPU más complejo que ofrece más precisión y mayores posibilidades. En el proyecto también se propone un prototipo de interfaz de una aplicación de interacción usuario-dispositivo.
 
@@ -16,7 +16,7 @@ La última versión del prototipo consigue un correcto control postural. Sin emb
 
 
 ## **Abstract**
-This work focuses on finding a solution to a real need in order to find a postural control device to support posture improvement in different groups. During the development of the project, the theoretical aspects of posture and postural control were studied. On the other hand, we have investigated the different solutions available in the current market in order to specify the basic features that the device should have. 
+This work focuses on finding a solution to a real need in order to create a postural control device to support posture improvement in different groups. During the development of the project, the theoretical aspects of posture and postural control were studied. On the other hand, we have investigated the different solutions available in the current market in order to specify the basic features that the device should have. 
 
 After obtaining the idea, a search of the possible components was made and the components to be incuded were weighed. Two versions of the prototype have been created. The first version uses a very simple tilt sensor and the second version uses a more complex MPU sensor that offers more precision and greater possibilities. The project also proposes a prototype app interface for well user-device interaction.
 
