@@ -48,16 +48,16 @@ En el repositorio de GitHub al cual se puede acceder \href{https://github.com/Na
 
 \section{Instrucciones para la modificación o mejora del proyecto.}
 
-Al ser este proyecto un prototipo hay varios aspectos de mejora para el futuro desde añadir componentes al prototipo a crear una carcasa o crear una base de datos donde se guarden los datos adquiridos.
+Al ser este proyecto un prototipo hay varios aspectos de mejora para el futuro desde añadir componentes al prototipo, a crear una carcasa o crear una base de datos donde se guarden los datos adquiridos.
 
 Durante el desarrollo de la primera fase se observó que el sensor empleado no era de gran precisión y por ello se decidió crear una segunda versión con un sensor de mayor precisión, el sensor MPU-6050\cite{MPU6050_1,MPU6050_2}, que supusiera una ventaja al proyecto. 
 
-La segunda versión tiene la necesidad de realizar una calibración cada vez que se conecta el prototipo al portátil que tiene instalado el software de Arduino IDE\cite{ArduinoIDE}, como primera propuesta de mejora se podría modificar el código del programa para que no fuese necesario calibrar el dispositivo con tanta frecuencia y para que no fuese necesario presionar un el botón de calibración siempre.
+La segunda versión tiene la necesidad de realizar una calibración cada vez que se conecta el prototipo al portátil que tiene instalado el software de Arduino IDE\cite{ArduinoIDE}, como primera propuesta de mejora se podría modificar el código del programa para que no fuese necesario calibrar el dispositivo con tanta frecuencia y para que no fuese necesario presionar el botón de calibración siempre.
 
-El sensor resultó exitoso, sin embargo, por las características del sensor MPU6050 este prototipo no puede ser utilizado durante largos periodos de tiempo ya que se crea deriva y se distorsionan las mediciones. Por ello, como propuesta de mejora se podrían estudiar el uso de otros sensores similares que resolviesen este problema uno de los sensores que se podrían emplear sería el MPU9250\cite{MPU9250_1,MPU9250_2}.
+El sensor resultó exitoso, sin embargo, por las características del sensor MPU6050 este prototipo no puede ser utilizado durante largos periodos de tiempo ya que se crea deriva y se distorsionan las mediciones. Por ello, como propuesta de mejora se podrían estudiar el uso de otros sensores similares que resolviesen este problema. Uno de los sensores que se podrían emplear sería el MPU9250\cite{MPU9250_1,MPU9250_2}.
 
-Además, para el prototipo se podría crear una placa electrónica donde se encuentren todos los componentes del prototipo sin la necesidad de emplear una placa de pruebas. Asimismo, se podría crear una carcasa, por ejemplo, empleando impresión 3D que protegiese el hardware y que se adaptase de manera ergonómica al cuerpo de la persona.
+Además, para el prototipo se podría crear una placa electrónica donde se encuentren todos los componentes del prototipo sin necesidad de emplear una placa de pruebas. Asimismo, se podría crear una carcasa, por ejemplo, empleando impresión 3D que protegiese el hardware y que se adaptase de manera ergonómica al cuerpo de la persona.
 
 Al prototipo se podrían incluir otros elementos como pueden ser una batería y un módulo Bluetooth para mejorar la interacción con el usuario, eliminando cables que pueden ser incómodos para el usuario además que pueden limitar la libertad de los movimientos. Disponer de un módulo Bluetooth también permitiría transmitir los datos que recoge el sensor sin necesidad de conexión USB. 
 
-Este último punto nos lleva a otro punto a mejorar, el almacenamiento y tratamiento de los datos. Se puede implementar una forma de almacenaje de los datos para que se pueda trabajar con ellos obteniendo distintas estadísticas que serían útiles en el futuro. Y que se realice un trabajo estadístico de esos mismos datos para conecer más información a parte de la corrección en tiempo real de la postura.
+Este último punto nos lleva a otro punto a mejorar, el almacenamiento y tratamiento de los datos. Se puede implementar una forma de almacenaje de los datos para que se pueda trabajar con ellos obteniendo distintas estadísticas que serían útiles en el futuro. Y que se realice un trabajo estadístico de esos mismos datos para conocer más información a parte de la corrección en tiempo real de la postura.

@@ -40,7 +40,7 @@ Prioridad                              & \multicolumn{1}{c|}{Alta}              
 >{\columncolor[HTML]{EFEFEF}}c |l|}
 \hline
 \cellcolor[HTML]{B9E3F0}\textbf{RF-03} & \multicolumn{1}{c|}{\cellcolor[HTML]{B9E3F0}\textbf{Identificación de perfiles}}                                                                                                                                                                                \\ \hline
-Descripción                            & \begin{tabular}{p{10.5cm}}La aplicación debe ser capaz de diferenciar a diferentes perfiles, en el caso de uso de una organización o un profesional, y una única identificación en el caso de que se trate de un usuario particular.\end{tabular} \\ \hline
+Descripción                            & \begin{tabular}{p{10.5cm}}La aplicación debe ser capaz de diferenciar diferentes perfiles, en el caso de uso de una organización o un profesional, y una única identificación en el caso de que se trate de un usuario particular.\end{tabular} \\ \hline
 Importancia                            & \cellcolor[HTML]{FFFFFF}\begin{tabular}{p{10.5cm}}Media, una vez se obtenga la base del dispositivo y su funcionamiento se puede dividir a los usuarios entre profesionales o particulares, con distintas funciones para cada uno de ellos.\end{tabular}                                                                               \\ \hline
 Prioridad                              & \multicolumn{1}{c|}{Media}                                                                                                                                                                                                                       \\ \hline
 \end{tabular}
@@ -165,14 +165,14 @@ Se pueden observar los componentes y las conexiones realizadas en esta versión 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/PrototipoV1_Tilt.png}
-    \caption{Diagrama de la primera versión del prototipo, empleando el sensor SW520D}
+    \caption{Diagrama de la primera versión del prototipo, empleando el sensor SW520D. Fuente propia.}
     \label{fig:ProtV1}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Prot_V1_Esquema.pdf}
-    \caption{Diagrama de las realizadas para la implementación de la primera versión del prototipo.}
+    \caption{Diagrama de las realizadas para la implementación de la primera versión del prototipo. Fuente propia.}
     \label{fig:ProtV1_esquema} 
 \end{figure}
 
@@ -293,21 +293,21 @@ Esta segunda versión mantiene el botón de encendido, el led de color azul que 
 
 Además, esta versión cuenta con un botón de calibración para mayor precisión. Este botón deberá presionarse cuando el dispositivo se encienda cuando se coloque por primera vez en la espalda del usuario con una postura correta o en el caso de que el usuario sea consciente de que el dispositivo no esté funcionando correctamente.  
 
-El sensor detecta que la persona se ha inclinado más del ángulo umbral\footnote{En caso de que el usuario no hay indicado un ángulo umbral, se tomará como valor por defecto 15º} respecto a su posición inicial correcta, se detecta una mala postura y se ofrece el biofeedback sonoro (melodía modificable empleando el zumbador) y vibratorio (motor de vibración) para que el usuario modifique su postura. Una vez la persona recupera su postura natural correcta el dispositivo deja de sonar y vibrar, indicando que se encuentra en una postura correcta. 
+El sensor detecta que la persona se ha inclinado más allá del ángulo umbral\footnote{En caso de que el usuario no hay indicado un ángulo umbral, se tomará como valor por defecto 15º} respecto a su posición inicial correcta, por lo cual se detecta una mala postura y se ofrece el biofeedback sonoro (melodía modificable empleando el zumbador) y vibratorio (motor de vibración) para que el usuario modifique su postura. Una vez la persona recupera su postura natural correcta el dispositivo deja de sonar y vibrar, indicando que se encuentra en una postura correcta. 
 
 Se pueden observar los componentes y las conexiones realizadas en esta versión en los diagramas \textit{Figura \ref{fig:ProtV2}} y \textit{Figura \ref{fig:ProtV2_esquema}}.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/PrototipoV2_MPU6050.png}
-    \caption{Diagrama de la segunda versión del prototipo, empleando el módulo MPU-6050}
+    \caption{Diagrama de la segunda versión del prototipo, empleando el módulo MPU-6050. Fuente propia.}
     \label{fig:ProtV2} 
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Prot_V2_Esquema.pdf}
-    \caption{Diagrama de las conexiones realizadas para la implementación de la segunda versión, siendo el módulo MPU-6050, U2.}
+    \caption{Diagrama de las conexiones realizadas para la implementación de la segunda versión, siendo el módulo MPU-6050, U2. Fuente propia.}
     \label{fig:ProtV2_esquema} 
 \end{figure}
 
@@ -674,9 +674,9 @@ void melodia(){
 
 \end{lstlisting}
 
-Esta versión proporciona un resultado satisfactorio, porque realiza la función del control postural correctamente, aunque hay que calibrarlo cada vez que se enciende el dispositivo y la calibración puede llevar varios minutos. Además, es posible modificar el ángulo de aviso que se quiere tener de umbral de correcta o incorrecta postura. También se puede modificar el tiempo de espera que se quiere tener para dar el aviso de una postura incorrecta, por defecto el tiempo es de 5 segundos.
+Esta versión proporciona un resultado satisfactorio, porque realiza la función del control postural correctamente, aunque hay que calibrarlo cada vez que se enciende el dispositivo y la calibración puede llevar varios minutos. Además, es posible modificar el ángulo de aviso que se quiere tener de umbral de correcta o incorrecta postura (por defecto el ángulo es de 15º). También se puede modificar el tiempo de espera que se quiere tener para dar el aviso de una postura incorrecta (por defecto el tiempo es de 5 segundos).
 
-Por otro lado, en esta versión se ha improvisado una base de calibración empleando material reciclado de cartón para mantener el sensor de forma plana. Además se improvisado también la forma de acoplarlo a la espalda del usuario para que se realicen mediciones correctas. Si no se coloca correctamente el sensor habría que modificar los ejes en el código, ya que no detectara de forma correcta los ángulos y esto puede ser algo complejo. En la \textit{Figura \ref{fig:imgMecanismoAjuste}} se puede visualizar el mecanismo empleado para acoplar el dispositivo a la espalda del usuario, este mecanismo consta del propio dispositivo, unos tirantes, un cinturón y gomas elásticas para su sujeción.
+Por otro lado, en esta versión se ha improvisado una base de calibración empleando material reciclado de cartón para mantener el sensor de forma plana. Además se improvisado también la forma de acoplarlo a la espalda del usuario para que se realicen mediciones correctas. Si no se coloca correctamente el sensor, habría que modificar los ejes en el código, ya que no detectaría de forma correcta los ángulos y esto puede ser algo complejo. En la \textit{Figura \ref{fig:imgMecanismoAjuste}} se puede visualizar el mecanismo empleado para acoplar el dispositivo a la espalda del usuario. Este mecanismo consta del propio dispositivo, unos tirantes, un cinturón y gomas elásticas para su sujeción.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{img/PlacaArd_V2_2.jpg}
@@ -696,9 +696,9 @@ Los vídeos de ambas demostraciones se pueden encontrar en el repositorio \href{
 
 \subsection{Demostración de la primera versión del prototipo}
 
-En primer lugar el usuario se deberá colocar el prototipo, si es necesario puede solicitar ayuda a otra persona. Se puede ver el prototipo colocado en la \textit{Figura \ref{fig:imgDispositivo_V1}}.
+En primer lugar el usuario se deberá colocar el prototipo. Si es necesario puede solicitar ayuda a otra persona. Se puede ver el prototipo colocado en la \textit{Figura \ref{fig:imgDispositivo_V1}}.
 
-Una vez se encuentre colocado el dispositivo se encenderá presionando el botón de encendido, tras encender el prototipo se encenderá un led azul. El dispositivo empezará a controlar la postura del usuario.
+Una vez se encuentre colocado el dispositivo, se encenderá presionando el botón de encendido. Tras encender el prototipo se encenderá un led azul y el dispositivo empezará a controlar la postura del usuario.
 
 
 \begin{figure}[h!]
@@ -709,7 +709,7 @@ Una vez se encuentre colocado el dispositivo se encenderá presionando el botón
     \label{fig:imgDispositivo_V1} 
 \end{figure}
 
-Para poder comprobar su correcto funcionamiento el usuario se inclinará hacia delante y el dispositivo al detectar un postura incorrecta (\textit{Figura \ref{fig:imgV1_posturaInc}}) dará feedback a través de sonido, y en el caso de tener añadido en el dispositivo un motor de vibración, también vibrará. Tras unos segundos el usuario volverá a una posición correcta (\textit{Figura \ref{fig:imgV1_posturaInc}}), al corregir su postura el dispositivo dejará de sonar y de vibrar.
+Para poder comprobar su correcto funcionamiento el usuario se inclinará hacia delante y el dispositivo al detectar una postura incorrecta (\textit{Figura \ref{fig:imgV1_posturaInc}}) dará feedback a través de sonido, y en el caso de tener añadido en el dispositivo un motor de vibración, también vibrará. Tras unos segundos el usuario volverá a una posición correcta (\textit{Figura \ref{fig:imgV1_posturaInc}}). Al corregir su postura el dispositivo dejará de sonar y de vibrar.
 
 \begin{figure}[h!]
     \centering
@@ -726,14 +726,14 @@ Para poder comprobar su correcto funcionamiento el usuario se inclinará hacia d
 \end{figure}
 
 
-Se volverá a comprobar que funciona correctamente haciendo que el usuario se vuelva a inclinar hacia delante, el dispositivo volverá a indicar que se ha establecido una mala postura y el usuario gracias al aviso sabrá que deberá corregir su postura, una vez el usuario haya corregido su postura el dispositivo dejará de pitar.
+Se volverá a comprobar que funciona correctamente haciendo que el usuario se vuelva a inclinar hacia delante, el dispositivo volverá a indicar que se ha establecido una mala postura y el usuario gracias al aviso sabrá que deberá corregir su postura. Una vez el usuario haya corregido su postura el dispositivo dejará de pitar.
 
-Se realizarán pruebas en las que el usuario se agache o salte o ande para ver cuando da problemas este dispositivo, debido a su sensibilidad a vibraciones. Los problemas detectados son aquellos que se intentarán solucionar en la segunda version donde se empleará un sensor más complejo.
+Se realizarán pruebas en las que el usuario se agache, salte o ande para ver cuando da problemas este dispositivo, debido a su sensibilidad a vibraciones. Los problemas detectados son aquellos que se intentarán solucionar en la segunda versión donde se empleará un sensor más complejo.
 
 Por último, el dispositivo se apagará empleando el botón de encendido/ apagado.
 
 
-\subsection{Demostración de la primera versión del prototipo}
+\subsection{Demostración de la segunda versión del prototipo}
 
 Para la demostración de esta segunda versión en la que se emplea un sensor más complejo y preciso, el sensor MPU6050\cite{MPU6050_1,MPU6050_2}, el primer paso es que el usuario se coloque el prototipo. Se puede ver el prototipo colocado en la \textit{Figura \ref{fig:imgDispositivo_V2}}.
 
@@ -746,7 +746,7 @@ Para la demostración de esta segunda versión en la que se emplea un sensor má
     \label{fig:imgDispositivo_V2} 
 \end{figure}
 
-Una vez el dispositivo se encuentre correctamente colocado el sistema pedirá el ángulo de aviso y el tiempo de aviso (\textit{Figura \ref{fig:imgAnguloTiempo}}), si el usuario no indica estos datos se toma como valor por defecto 15º y 5 segundos. Se debe encender el dispositivo presionando el botón de encendido. Al encender el prototipo se encenderá un led de color azul y el dispositivo comenzará a controlar la postura. Si es la primera vez que se conecta al portatil el dispositivo deberá calibrar el dispositivo. En ese momento el usuario deberá presionar el botón de calibración para calibrar el dispositivo. Durante la calibración el dispositivo no debe moverse y puede tardar varios minutos, en la \textit{Figura \ref{fig:imgCalibracion}} se pueden observar un ejemplo de los datos que se imprimirían por pantalla. Una vez calibrado, el dispositivo pitará 3 veces o vibrará tres veces y mostrará por pantalla que el dispositivo se encuentra calibrado.
+Una vez el dispositivo se encuentre correctamente colocado, el sistema pedirá el ángulo de aviso y el tiempo de aviso (\textit{Figura \ref{fig:imgAnguloTiempo}}). Si el usuario no indica estos datos se toma como valor por defecto 15º y 5 segundos. Se debe encender el dispositivo presionando el botón de encendido. Al encender el prototipo se encenderá un led de color azul y el dispositivo comenzará a controlar la postura. Si es la primera vez que se conecta al portátil, se deberá calibrar el dispositivo. En ese momento el usuario deberá presionar el botón de calibración para calibrarlo. Durante la calibración el dispositivo no debe moverse y puede tardar varios minutos, en la \textit{Figura \ref{fig:imgCalibracion}} se pueden observar un ejemplo de los datos que se imprimirían por pantalla. Una vez calibrado, el dispositivo pitará 3 veces o vibrará tres veces y mostrará por pantalla que el dispositivo se encuentra calibrado.
 
 \begin{figure}[h!]
     \centering
@@ -798,7 +798,7 @@ Para comprobar su funcionamiento la persona se inclinará ligeramente hacia dela
     \label{fig:imgV2_posturaInc_Pantalla} 
 \end{figure}
 
-El usuario se inclinará de nuevo ligeramente y el dispositivo indicará una mala postura, la persona corregirá su postura tras conocer su estado gracias al dispositivo, y una vez corregida la postura el dispositivo dejará de emitir la alerta.
+El usuario se inclinará de nuevo ligeramente y el dispositivo indicará una mala postura, por ello la persona corregirá su postura tras conocer su estado gracias al dispositivo, y una vez corregida la postura el dispositivo dejará de emitir la alerta.
 
 Se puede probar la mayor precisión de esta versión realizando los movimientos que perturbaban en la versión anterior, como agacharse o saltar donde el sensor deberá no deberá emitir alerta.
 
