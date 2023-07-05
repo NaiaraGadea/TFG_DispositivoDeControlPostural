@@ -215,17 +215,18 @@ void lecturas(){
   // Si queremos pasar las lecturas del acelerometro a m/s^2 hay que multiplicar las lecturas por (9.81/16384.0). 
   // En la componente Z se deben encontrar mediciones aproximadas a los 9.8 m/s^2 
   // Si queremos pasar las lecturas del giroscopio a deg/s (grados/s) hay que multiplicar las lecturas por (250.0/32768.0) 
-  Serial.print("a[x y z]   Incl X   Incl Y  g[x y z]:\t"); 
+  Serial.print("a[x y z]   Incl X   Incl Y   Incl Z g[x y z]:\t"); 
   Serial.print(ax*(9.81/16384.0)); Serial.print("\t"); // En m/s^2
   Serial.print(ay*(9.81/16384.0)); Serial.print("\t"); // En m/s^2
-  Serial.print(az*(9.81/16384.0)/2); Serial.print("\t"); // En m/s^2
+  Serial.print(az*(9.81/16384.0)); Serial.print("\t"); // En m/s^2 // Si no funciona el eje Z dividir entre 2
 
-  accel_ang_x=atan(ax/sqrt(pow(ay,2) + pow(az,2)))*(360.0/3.14); // En angulos de inclinacion
+
+  accel_ang_x=atan(ax/sqrt(pow(ay,2) + pow(az,2)))*(180.0/3.14);//*(360.0/3.14); // En angulos de inclinacion (360 en caso de que falle eje z)
   Serial.print(accel_ang_x); Serial.print("\t"); 
-  accel_ang_y=atan(ay/sqrt(pow(ax,2) + pow(az,2)))*(360.0/3.14); // En angulos de inclinacion
+  accel_ang_y=atan(ay/sqrt(pow(ax,2) + pow(az,2)))*(180.0/3.14);//*(360.0/3.14); // En angulos de inclinacion
   Serial.print(accel_ang_y); Serial.print("\t"); 
-  accel_ang_z=atan(az/sqrt(pow(ax,2) + pow(ay,2)))*(360.0/3.14); // En angulos de inclinacion
-  Serial.print(accel_ang_z); Serial.print("\t"); 
+  accel_ang_z=atan(az/sqrt(pow(ax,2) + pow(ay,2)))*(180.0/3.14);//*(360.0/3.14); // En angulos de inclinacion
+  Serial.print(accel_ang_z); Serial.print("\t");  
   
   // Esto no es necesario
   Serial.print(gx*(250.0/32768.0)); Serial.print("\t"); // En grados/s
@@ -297,8 +298,8 @@ void calibracion(){
     
     counter=0; 
 
-    if (p_ax>-10 & p_ax<10 & p_ay>-10 & p_ay<10 & p_az>32757 & p_az<32777 & p_gx>-10 & p_gx<10 & p_gy>-10 & p_gy<10 & p_gz>-10 & p_gz<10){
-    //if (p_ax>-10 & p_ax<10 & p_ay>-10 & p_ay<10 & p_az>16374 & p_az<16394 & p_gx>-10 & p_gx<10 & p_gy>-10 & p_gy<10 & p_gz>-10 & p_gz<10){
+    //if (p_ax>-10 & p_ax<10 & p_ay>-10 & p_ay<10 & p_az>32757 & p_az<32777 & p_gx>-10 & p_gx<10 & p_gy>-10 & p_gy<10 & p_gz>-10 & p_gz<10){
+    if (p_ax>-10 & p_ax<10 & p_ay>-10 & p_ay<10 & p_az>16374 & p_az<16394 & p_gx>-10 & p_gx<10 & p_gy>-10 & p_gy<10 & p_gz>-10 & p_gz<10){
       Serial.println("DISPOSITIVO CALIBRADO!!!");
       // El dispositivo Pita 3 veces ara indicar que se ha calibrado correctamente.
       tone(zum, Sol, 500);
