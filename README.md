@@ -69,6 +69,7 @@ En el repositorio encontraremos los siguientes ficheros y directorios:
 - **Carpeta memoria_PDF**: carpeta dónde se encuentran los documentos PDF de la memoria.
   - memoria_NaiaraRodriguez.pdf: documento PDF que contiene la memoria completa.
   - anexos_NaiaraRodriguez.pdf: documento PDF que contiene los anexos completos.
+  - PresentacionTFG_NaiaraRodriguez.pdf: documento PDF que contiene la presentacion realizada para la defensa del proyecto.
 - **Carpeta Arduino**: carpeta dónde se encuentran los programas de Arduino empleados en las distintas versiones del prototipo del proyecto.
   - ProgramaV1.ino: Programa que se ha de cargar en la placa de Arduino de la primera versión del prototipo del dispositivo de control postural, dónde se emplea el sensor SW520D.
   - ProgramaV2.ino: Programa que se ha de cargar en la placa de Arduino de la segunda versión del prototipo del dispositivo de control postural, dónde se emplea el módulo MPU-6050.
